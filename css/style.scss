@@ -1,0 +1,167 @@
+$primaryTextColor: #1e549f;
+$backgroundLightGray: #fafafa;
+$navLinkColor: #132743;
+$titleFontSize: 5vw;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+header .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+.background::before {
+    content: '';
+    background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
+    background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+opacity: 1;
+}
+.wrapper {
+    width: calc(90%);
+    margin-inline: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .my-logo {
+        color: $backgroundLightGray;
+        text-decoration: none;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            list-style: none;
+            padding: 10px;
+            a {
+                text-decoration: none;
+                color: $backgroundLightGray;
+            }
+        }
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        padding: 0;
+        margin: 0.2rem;
+        color: $backgroundLightGray;
+    }
+    
+}
+
+/* About Me Section */
+.section-1 {
+    min-height: 100vh;
+    padding: 1.5rem 0;
+}
+.about-me-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    h1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    img {
+        width: 15%;
+        clip-path: circle();
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+    }
+    .about-me-content {
+        width: calc(50%);
+    }
+    .hobby-content {
+        background: lightgray;
+        width: 50%;
+        .hobby-inner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+/*Skills*/
+.section-2 {
+    background: $backgroundLightGray;
+    min-height: 100vh;
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+        text-transform: uppercase;
+        h1 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+            padding-bottom: 2rem;
+            font-style: italic;
+        }
+    }
+    .skills-content{
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        .skill-column img {
+            width: 50%;
+        }
+    }
+}
+/* Projects Section */
+.section-3 {
+    min-height: 100vh;
+    .project-container {
+        text-align: center;
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+        }
+    }
+}
+
+
+/* Footer */
+footer {
+    min-height: 30vh;
+    background: $navLinkColor;
+    color: $backgroundLightGray;
+    text-align: center;
+    .footer-container {
+        padding: 1.2rem 0;
+    }
+}
