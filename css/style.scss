@@ -221,6 +221,10 @@ nav {
     z-index: 98;
     opacity: 0;
     transition: 0.8s ease-in-out;
+    @include mediaQuery680px(){
+        width: fit-content;
+        height: fit-content;
+    }
     .modal-close-btn{
         position: absolute;
         right: 2rem;

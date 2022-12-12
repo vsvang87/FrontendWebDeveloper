@@ -236,6 +236,16 @@ nav ul li a:hover {
   -webkit-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
 }
+@media (max-width: 680px) {
+  .modal-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .modal-container .modal-close-btn {
   position: absolute;
   right: 2rem;
