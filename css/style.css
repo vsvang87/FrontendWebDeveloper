@@ -24,7 +24,7 @@ header .background {
 
 .background::before {
   content: "";
-  background-image: url(/image/pexels-aleksey-kuprikov-3551227.jpg);
+  background-image: url(/image/pexels-pixabay-210243.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,8 +33,8 @@ header .background {
   left: 0;
   bottom: 0;
   right: 0;
-  -webkit-filter: brightness(55%);
-          filter: brightness(55%);
+  -webkit-filter: brightness(45%);
+          filter: brightness(45%);
   background-attachment: fixed;
 }
 
@@ -57,10 +57,10 @@ nav {
   letter-spacing: 0.1rem;
 }
 nav .my-logo {
-  color: #fafafa;
+  color: #e8630a;
   text-decoration: none;
   padding: 0.3rem 1rem;
-  border: 2px solid #fafafa;
+  border: 2px solid #e8630a;
 }
 nav ul {
   display: -webkit-box;
@@ -103,6 +103,9 @@ nav ul li a:hover {
 .container h1 {
   font-size: calc(5vw + 10px);
   color: #fafafa;
+}
+.container .orange-text {
+  color: #e8630a;
 }
 .container .intro-content p {
   padding: 0.3 0;
@@ -191,7 +194,7 @@ nav ul li a:hover {
 
 /* HTML Email Project Section */
 .section-3 {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 2.5rem 0;
   letter-spacing: 0.1rem;
   display: -webkit-box;
