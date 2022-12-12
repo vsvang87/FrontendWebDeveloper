@@ -321,11 +321,16 @@
       <div class="wrapper">
         <h1>GET IN TOUCH</h1>
         <div class="form-container">
-          <form action="" class="form">
+          <form
+            id="my-form"
+            action="https://formspree.io/f/moqbbvna"
+            method="POST"
+            class="form"
+          >
             <div class="form-group">
               <input
                 type="text"
-                class="name"
+                name="name"
                 id="name"
                 placeholder="Name"
                 required
@@ -334,7 +339,7 @@
             <div class="form-group">
               <input
                 type="text"
-                class="name"
+                name="email"
                 id="email"
                 placeholder="Email"
                 required
@@ -344,6 +349,7 @@
               <textarea
                 rows="10"
                 cols="25"
+                name="message"
                 id="message"
                 placeholder="Message"
               ></textarea>
@@ -352,6 +358,7 @@
               <button type="submit" class="btn">Send</button>
               <button type="reset" class="btn">Reset</button>
             </div>
+            <div id="status" class="error-status"></div>
           </form>
         </div>
       </div>
@@ -376,5 +383,6 @@
       </div>
       <small>copyright @visayvang 2022</small>
     </footer>
+    <script src="/js/main.js"></script>
   </body>
 </html>

@@ -442,6 +442,9 @@ align-items: center;
                     }
                 }
             }
+            .error-status{
+                text-align: center;
+            }
         }
     }
 }
@@ -469,5 +472,32 @@ align-items: center;
                 padding: 0 .3rem;
             }
         }
+    }
+}
+/* Error Message Status */
+#status{
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  #status.success{
+    color: green;
+    animation: status 4s ease forwards;
+  }
+  #status.error{
+    color: red;
+    animation: status 4s ease forwards;
+  }
+  @keyframes status{
+    0%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    50%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    100%{
+      opacity: 0;
+      pointer-events: all;
     }
 }
