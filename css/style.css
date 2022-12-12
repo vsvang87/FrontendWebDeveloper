@@ -105,6 +105,7 @@ nav ul li a:hover {
 .container h1 {
   font-size: calc(5vw + 10px);
   color: #fafafa;
+  margin: 0;
 }
 .container .orange-text {
   color: #e8630a;
@@ -170,7 +171,7 @@ nav ul li a:hover {
   }
 }
 .about-me-container .about-me-content .read-btn {
-  padding: 0.3rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   background: #e8630a;
   border: none;
   cursor: pointer;
@@ -324,7 +325,7 @@ nav ul li a:hover {
 }
 @media (max-width: 680px) {
   .section-3 .project-container .project-content .project-column {
-    width: 50%;
+    width: 70%;
   }
 }
 .section-3 .project-container .project-content .project-column:hover {
@@ -399,7 +400,7 @@ nav ul li a:hover {
 }
 @media (max-width: 680px) {
   .section-4 .landing-page-container .landing-page-content .landing-page-column {
-    width: 70%;
+    width: 80%;
   }
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column:hover {
@@ -534,7 +535,7 @@ nav ul li a:hover {
 }
 @media (max-width: 680px) {
   .section-6 .mini-project-content .mini-inner-content {
-    width: 70%;
+    width: 80%;
   }
 }
 .section-6 .mini-project-content .mini-inner-content:hover {
@@ -626,6 +627,11 @@ nav ul li a:hover {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.3);
           box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 780px) {
+  .contact-form .form-container .form .form-group input, .contact-form .form-container .form .form-group textarea {
+    width: 70%;
+  }
 }
 .contact-form .form-container .form .form-group input:focus, .contact-form .form-container .form .form-group textarea:focus {
   border: 1px solid #222831;

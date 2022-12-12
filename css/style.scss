@@ -105,7 +105,7 @@ nav {
     h1 {
         font-size: calc(5vw + 10px);
         color: $backgroundLightGray;
-        
+        margin: 0;
     }
     .orange-text{
         color: $colorOrange;
@@ -159,7 +159,7 @@ nav {
             width: 100%;
         }
         .read-btn{
-            padding: 0.3rem .8rem;
+            padding: 0.4rem .8rem;
             background: $colorOrange;
             border: none;
             cursor: pointer;
@@ -285,7 +285,7 @@ nav {
                 z-index: 1;
                 object-fit: contain;
                 @include mediaQuery680px(){
-                    width: 50%;
+                    width: 70%;
                     
                 }
                 &:hover{
@@ -349,7 +349,7 @@ align-items: center;
             z-index: 1;
             transition: 0.2s ease;
             @include mediaQuery680px(){
-                width: 70%;
+                width: 80%;
             }
             &:hover{
                 transform: scale(1.05);
@@ -456,7 +456,7 @@ align-items: center;
             transition: 0.2s ease;
             object-fit: contain;
             @include mediaQuery680px(){
-                width: 70%;
+                width: 80%;
             }
             &:hover{
                 transform: scale(1.05);
@@ -532,6 +532,9 @@ align-items: center;
                     border: 1px solid $colorLightGray;
                     font-family: Arial, Helvetica, sans-serif;
                     box-shadow: 1px 2px 0 0 rgba($color: #000000, $alpha: 0.3);
+                    @include mediaQuery780px(){
+                        width: 70%;
+                    }
                     &:focus{
                         border: 1px solid $colorOffBlack;
                     }
