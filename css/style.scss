@@ -42,7 +42,7 @@ header .background {
 }
 .background::before {
     content: '';
-    background-image: url(/image/pexels-pixabay-210243.jpg);
+    background-image: url(/image/pexels-pixabay-417173.jpg);
     background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -71,6 +71,7 @@ nav {
         text-decoration: none;
         padding: 0.3rem 1rem;
         border: 2px solid $colorOrange;
+        font-size: 1.5rem;
     }
     ul {
         display: flex;
@@ -157,6 +158,18 @@ nav {
         @include mediaQuery780px(){
             width: 100%;
         }
+        .read-btn{
+            padding: 0.3rem .8rem;
+            background: $colorOrange;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: $backgroundLightGray;
+            transition: 0.2s ease;
+            &:hover{
+                background: $colorBlue;
+            }
+        }
         h1{
             color: $colorOffBlack;
         }
@@ -193,7 +206,48 @@ nav {
         }
     }
 }
-
+/* Modal Section */
+.modal-container{
+    width: 450px;
+    height: 500px;
+    background: $colorOffBlack;
+    border-radius: 2px;
+    margin: 0 auto;
+    position: fixed;
+    top: -200%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    opacity: 0;
+    transition: 0.8s ease-in-out;
+    .modal-close-btn{
+        position: absolute;
+        right: 2rem;
+        top: 1rem;
+        .modal-btn{
+            cursor: pointer;
+            background: transparent;
+            font-size: 2rem;
+            border: none;
+            color: $backgroundLightGray;
+        }
+    }
+    .modal-content{
+        color: $backgroundLightGray;
+        width: 90%;
+        margin-inline: auto;
+        padding: 4rem 0;
+        h1{
+            color: $colorOrange;
+        }
+    }
+    
+}
+.modal-container.open{
+    opacity: 1;
+    top: 4rem;
+}
 /* HTML Email Project Section */
 .section-3 {
     min-height: 80vh;

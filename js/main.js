@@ -1,5 +1,16 @@
 let form = document.getElementById("my-form");
+let modalCloseBtn = document.getElementById("modal-btn");
+let readMoreBtn = document.getElementById("read-more-btn");
+let modal = document.getElementById("modal");
 
+//open modal
+readMoreBtn.addEventListener("click", () => {
+  modal.classList.add("open");
+});
+//close modal
+modalCloseBtn.addEventListener("click", () => {
+  modal.classList.remove("open");
+});
 //form submit handler
 async function handleSubmit(event) {
   event.preventDefault();
