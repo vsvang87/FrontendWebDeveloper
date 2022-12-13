@@ -118,6 +118,11 @@ nav ul li a:hover {
   color: #fafafa;
   font-size: 1.3rem;
   padding-right: 0.3rem;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+.container .intro-content a:hover {
+  color: #e8630a;
 }
 
 /* About Me Section */
@@ -171,7 +176,7 @@ nav ul li a:hover {
   }
 }
 .about-me-container .about-me-content .read-btn {
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   background: #e8630a;
   border: none;
   cursor: pointer;
@@ -179,9 +184,30 @@ nav ul li a:hover {
   color: #fafafa;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  position: relative;
+  z-index: 1;
 }
-.about-me-container .about-me-content .read-btn:hover {
+.about-me-container .about-me-content .read-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
   background: #2b4353;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.about-me-container .about-me-content .read-btn:hover::after {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .about-me-container .about-me-content h1 {
   color: #222831;
@@ -191,6 +217,18 @@ nav ul li a:hover {
   -webkit-clip-path: circle();
           clip-path: circle();
   margin-bottom: 0;
+  position: relative;
+  z-index: 3;
+}
+.about-me-container .about-me-content img::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2b4353;
 }
 .about-me-container .skills-content {
   border: 0.5px solid #b8b6b3;
@@ -339,6 +377,10 @@ nav ul li a:hover {
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .bold-text {
   font-weight: bold;
 }
+.section-4 .landing-page-container .landing-page-content .landing-page-column .description small {
+  padding: 0.2rem;
+  font-style: italic;
+}
 .section-4 .landing-page-container .landing-page-content .landing-page-column img {
   width: 100%;
   max-height: 550px;
@@ -403,11 +445,30 @@ nav ul li a:hover {
   font-size: 1.5rem;
   cursor: pointer;
   color: #fafafa;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
+  position: relative;
+  z-index: 1;
 }
-.section-5 .banner-content .btn-div .contact-btn:hover {
-  background: #2b4353;
+.section-5 .banner-content .btn-div .contact-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222831;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 0.25s ease-in;
+  transition: 0.25s ease-in;
+}
+.section-5 .banner-content .btn-div .contact-btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 /* Section 6, mini projects */
@@ -473,6 +534,10 @@ nav ul li a:hover {
 }
 .section-6 .mini-project-content .mini-inner-content .description .bold-text {
   font-weight: bold;
+}
+.section-6 .mini-project-content .mini-inner-content .description small {
+  padding: 0.2rem;
+  font-style: italic;
 }
 .section-6 .mini-project-content .mini-inner-content a {
   text-decoration: none;
