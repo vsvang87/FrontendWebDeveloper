@@ -132,7 +132,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3rem;
+    padding: 3rem 0;
 }
 .about-me-container {
     display: flex;
@@ -154,7 +154,7 @@ nav {
     }
     .about-me-content {
         width: calc(50%);
-        padding: 2rem 0;
+        padding: 3rem 0 2rem 0;
         @include mediaQuery780px(){
             width: 100%;
         }
@@ -252,71 +252,7 @@ nav {
     opacity: 1;
     top: 4rem;
 }
-/* HTML Email Project Section */
-.section-3 {
-    min-height: 80vh;
-    padding: 2.5rem 0;
-    letter-spacing: 0.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .project-container {
-        h1{
-            color: $colorOffBlack;
-            text-align: center;
-        }
-        .project-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            place-content: center;
-            @include mediaQuery950px(){
-                grid-template-columns: repeat(2, 1fr);
-            }
-            @include mediaQuery680px(){
-                grid-template-columns: 1fr;
-                align-items: center;
-                justify-items: center;
-            }
-            .project-column{
-                box-shadow: 5px 5px 2px 2px rgba($color: #000000, $alpha: 0.3);
-                border: .5px solid $colorLightGray;
-                transition: 0.2s ease;
-                z-index: 1;
-                object-fit: contain;
-                @include mediaQuery680px(){
-                    width: 70%;
-                    
-                }
-                &:hover{
-                    transform: scale(1.05);
-                }
-                .bold-text{
-                    font-weight: bold;
-                }
-                p{
-                    margin: 0;
-                    padding: .2rem ;
-                }
-                a{
-                    text-decoration: none;
-                    color: black;
-                }
-                .card{
-                    img{
-                        width: 100%;
-                        height: 220px;
-                        border-bottom: 0.5px solid $colorLightGray;
-                    }
-                }
-                .description{
-                    padding: 0.8rem 0.3rem;
-                }
-            }
-            
-        }
-    }
-}
+
 /* Landing Page Project */
 .section-4{
 min-height: 100vh;
@@ -367,7 +303,7 @@ align-items: center;
             }
             img{
                 width: 100%;
-                height: 220px;
+                max-height: 550px;
                 border-bottom: 0.5px solid $backgroundLightGray;
             }
             a{
@@ -482,7 +418,7 @@ align-items: center;
                 }
                 img{
                     width: 100%;
-                    height: 220px;
+                   max-height: 550px;
                     
                 }
             }
@@ -546,8 +482,10 @@ align-items: center;
         }
     }
 }
+/* Back to Top */
 .back-to-top{
     text-align: center;
+    background: $backgroundLightGray;
     a{
         text-decoration: none;
         color: $colorBlue;
