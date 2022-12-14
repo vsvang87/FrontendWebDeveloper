@@ -1,7 +1,7 @@
-let form = document.getElementById("my-form");
-let modalCloseBtn = document.getElementById("modal-btn");
-let readMoreBtn = document.getElementById("read-more-btn");
-let modal = document.getElementById("modal");
+const form = document.getElementById("my-form");
+const modalCloseBtn = document.getElementById("modal-btn");
+const readMoreBtn = document.getElementById("read-more-btn");
+const modal = document.getElementById("modal");
 
 //open modal
 readMoreBtn.addEventListener("click", () => {
@@ -11,6 +11,7 @@ readMoreBtn.addEventListener("click", () => {
 modalCloseBtn.addEventListener("click", () => {
   modal.classList.remove("open");
 });
+
 //form submit handler
 async function handleSubmit(event) {
   event.preventDefault();

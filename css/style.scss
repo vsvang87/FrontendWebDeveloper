@@ -65,13 +65,12 @@ header .background {
     margin-inline: auto;
 }
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     letter-spacing: 0.1rem;
-    
+    position: relative;
     .my-logo {
         color: $colorOrange;
         text-decoration: none;
@@ -82,12 +81,12 @@ nav {
     ul {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         li {
             list-style: none;
             display: inline-block;
             cursor: pointer;
             padding:1rem;
-            
             a {
                 text-decoration: none;
                 color: $backgroundLightGray;
@@ -99,6 +98,7 @@ nav {
             }
         }
     }
+    
 }
 
 .container {

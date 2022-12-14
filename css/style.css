@@ -50,7 +50,7 @@ header .background {
   margin-inline: auto;
 }
 
-nav {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,37 +60,39 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   letter-spacing: 0.1rem;
+  position: relative;
 }
-nav .my-logo {
+.navbar .my-logo {
   color: #e8630a;
   text-decoration: none;
   padding: 0.3rem 1rem;
   border: 2px solid #e8630a;
   font-size: 1.5rem;
 }
-nav ul {
+.navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-nav ul li {
+.navbar ul li {
   list-style: none;
   display: inline-block;
   cursor: pointer;
   padding: 1rem;
 }
-nav ul li a {
+.navbar ul li a {
   text-decoration: none;
   color: #fafafa;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-nav ul li a:hover {
+.navbar ul li a:hover {
   color: #e8630a;
 }
 
