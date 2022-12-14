@@ -25,6 +25,15 @@ $titleFontSize: 5vw;
 
 html{
     scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: $colorOrange;
+    }
+    &::-webkit-scrollbar-track{
+        background: $colorLightGray;
+    }
 }
 body {
     padding: 0;
@@ -44,15 +53,12 @@ header .background {
     content: '';
     background-image: url(/image/pexels-pixabay-417173.jpg);
     background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-filter: brightness(45%);
-background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    inset: 0;
+    filter: brightness(45%);
+    background-attachment: fixed;
 }
 .wrapper {
     width: calc(90%);
@@ -247,7 +253,8 @@ nav {
     height: 500px;
     background: $colorOffBlack;
     border-radius: 2px;
-    margin: 0 auto;
+    box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
+    margin: auto auto;
     position: fixed;
     top: -200%;
     left: 0;
@@ -276,10 +283,12 @@ nav {
         color: $backgroundLightGray;
         width: 90%;
         margin-inline: auto;
-        padding: 4rem 0;
+        padding: 2rem 0;
+        letter-spacing: 0.05rem;
         h1{
             color: $colorOrange;
         }
+        
     }
     
 }
