@@ -2,6 +2,10 @@ const form = document.getElementById("my-form");
 const modalCloseBtn = document.getElementById("modal-btn");
 const readMoreBtn = document.getElementById("read-more-btn");
 const modal = document.getElementById("modal");
+const navbar = document.getElementById("navbar");
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const hamburgerCloseBtn = document.getElementById("hamburger-close");
+const navLink = document.querySelectorAll(".nav-link");
 
 //open modal
 readMoreBtn.addEventListener("click", () => {
@@ -10,6 +14,21 @@ readMoreBtn.addEventListener("click", () => {
 //close modal
 modalCloseBtn.addEventListener("click", () => {
   modal.classList.remove("open");
+});
+//open hamburger menu
+hamburgerBtn.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});
+//close hamburger menu
+hamburgerCloseBtn.addEventListener("click", () => {
+  navbar.classList.remove("open");
+});
+
+//close hamburger menu when click on link
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("open");
+  });
 });
 
 //form submit handler

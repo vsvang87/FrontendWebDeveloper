@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-header .background {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,25 +29,17 @@ header .background {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  position: relative;
+  background-color: #2b4353;
 }
-
-.background::before {
+header::after {
   content: "";
-  background-image: url(/image/pexels-pixabay-417173.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  inset: 0;
-  -webkit-filter: brightness(45%);
-          filter: brightness(45%);
-  background-attachment: fixed;
 }
 
 .wrapper {
   width: 90%;
+  max-width: 1440px;
   margin-inline: auto;
+  position: relative;
 }
 
 .navbar {
@@ -62,6 +54,46 @@ header .background {
           align-items: center;
   letter-spacing: 0.1rem;
   position: relative;
+  /* Hamburger Close Button */
+}
+@media (max-width: 680px) {
+  .navbar {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #222831;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+  }
+}
+.navbar .hamburger-close {
+  background: transparent;
+  color: #fafafa;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 680px) {
+  .navbar .hamburger-close {
+    display: block;
+  }
+}
+.navbar .hamburger-close.active {
+  left: -100%;
 }
 .navbar .my-logo {
   color: #e8630a;
@@ -69,6 +101,13 @@ header .background {
   padding: 0.3rem 1rem;
   border: 2px solid #e8630a;
   font-size: 1.5rem;
+}
+@media (max-width: 680px) {
+  .navbar .my-logo {
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem;
+  }
 }
 .navbar ul {
   display: -webkit-box;
@@ -79,6 +118,17 @@ header .background {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media (max-width: 680px) {
+  .navbar ul {
+    width: 100%;
+    height: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 2rem;
+  }
 }
 .navbar ul li {
   list-style: none;
@@ -92,22 +142,65 @@ header .background {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
+.navbar ul li a::after {
+  content: "";
+  background: #e8630a;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.3rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
 .navbar ul li a:hover {
   color: #e8630a;
 }
+.navbar ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
 
+/* Open Navbar Toggle */
+.navbar.open {
+  left: 0;
+}
+
+/* Hamburger Menu */
+.hamburger-div .hamburger-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fafafa;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+@media (max-width: 680px) {
+  .hamburger-div .hamburger-btn {
+    display: block;
+  }
+}
+
+/* END of Hamburger Menu */
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 80vh;
-  position: relative;
   letter-spacing: 0.1rem;
 }
 .container h1 {
@@ -135,7 +228,7 @@ header .background {
 
 /* About Me Section */
 .section-1 {
-  min-height: 100vh;
+  min-height: 80vh;
   letter-spacing: 0.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,7 +239,8 @@ header .background {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem 0;
+  padding: 1rem 0;
+  background: #2b4353;
 }
 
 .about-me-container {
@@ -156,15 +250,16 @@ header .background {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+}
+@media (max-width: 780px) {
+  .about-me-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 .about-me-container h1 {
   font-size: 1.5rem;
@@ -173,10 +268,14 @@ header .background {
 }
 .about-me-container p {
   margin-top: 0;
+  color: #fafafa;
+}
+.about-me-container .about-container h1 {
+  color: #fafafa;
+  font-size: calc(2vw + 10px);
 }
 .about-me-container .about-me-content {
-  width: 50%;
-  padding: 3rem 0 2rem 0;
+  padding: 1rem 0;
 }
 @media (max-width: 780px) {
   .about-me-container .about-me-content {
@@ -203,13 +302,16 @@ header .background {
   z-index: -1;
   top: 0;
   left: 0;
-  background: #2b4353;
+  background: #fafafa;
   -webkit-transition: 0.25s ease-in;
   transition: 0.25s ease-in;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+.about-me-container .about-me-content .read-btn:hover {
+  color: #e8630a;
 }
 .about-me-container .about-me-content .read-btn:hover::after {
   -webkit-transform-origin: left;
@@ -221,12 +323,8 @@ header .background {
   color: #222831;
 }
 .about-me-container .about-me-content img {
-  width: 15%;
-  -webkit-clip-path: circle();
-          clip-path: circle();
+  width: 80%;
   margin-bottom: 0;
-  position: relative;
-  z-index: 3;
 }
 .about-me-container .about-me-content img::after {
   content: "";
@@ -238,10 +336,10 @@ header .background {
   height: 100%;
   background: #2b4353;
 }
+.about-me-container .about-column {
+  width: 50%;
+}
 .about-me-container .skills-content {
-  border: 0.5px solid #b8b6b3;
-  -webkit-box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
   width: 50%;
 }
 @media (max-width: 780px) {
@@ -250,26 +348,38 @@ header .background {
   }
 }
 .about-me-container .skills-content h1 {
-  padding: 1rem 0;
+  margin: 0;
+  padding-bottom: 1rem;
+  color: #fafafa;
+  font-size: calc(2vw + 10px);
 }
 .about-me-container .skills-content .skills-inner-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
   place-content: center;
-  padding: 2rem 0;
 }
 .about-me-container .skills-content .skills-inner-content p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  color: #fafafa;
 }
-.about-me-container .skills-content .skills-inner-content .skills img {
-  width: 20%;
+.about-me-container .skills-content .skills-inner-content .skills {
+  text-align: center;
+  border: 1px solid #fafafa;
+  -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+}
+.about-me-container .skills-content .skills-inner-content .skills i {
+  color: #e8630a;
+  font-size: 2rem;
 }
 
 /* Modal Section */
 .modal-container {
-  width: 450px;
-  height: 500px;
+  width: 550px;
+  height: 495px;
   background: #222831;
   border-radius: 2px;
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
@@ -325,8 +435,8 @@ header .background {
 
 /* Landing Page Project */
 .section-4 {
-  min-height: 100vh;
-  padding-bottom: 2rem;
+  min-height: 80vh;
+  padding: 2rem 0;
   background: #2b4353;
   letter-spacing: 0.1rem;
   display: -webkit-box;
@@ -340,6 +450,7 @@ header .background {
           align-items: center;
 }
 .section-4 .landing-page-container h1 {
+  font-size: calc(2vw + 10px);
   text-align: center;
   color: #fafafa;
 }
@@ -443,7 +554,7 @@ header .background {
   }
 }
 .section-5 .banner-content .inner-banner h1 {
-  font-size: 3rem;
+  font-size: calc(3vw + 10px);
   color: #fafafa;
 }
 .section-5 .banner-content .inner-banner .orange-text {
@@ -484,8 +595,8 @@ header .background {
 
 /* Section 6, mini projects */
 .section-6 {
-  background: #fafafa;
-  min-height: 100vh;
+  background: #2b4353;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,8 +609,9 @@ header .background {
   padding: 2rem 0;
 }
 .section-6 h1 {
+  font-size: calc(2vw + 10px);
   text-align: center;
-  color: #222831;
+  color: #fafafa;
 }
 .section-6 .mini-project-content {
   display: grid;
@@ -542,6 +654,7 @@ header .background {
 .section-6 .mini-project-content .mini-inner-content .description p {
   margin: 0;
   padding: 0.5rem;
+  color: #fafafa;
 }
 .section-6 .mini-project-content .mini-inner-content .description .bold-text {
   font-weight: bold;
@@ -549,6 +662,7 @@ header .background {
 .section-6 .mini-project-content .mini-inner-content .description small {
   padding: 0.5rem;
   font-style: italic;
+  color: #fafafa;
 }
 .section-6 .mini-project-content .mini-inner-content a {
   text-decoration: none;
@@ -566,8 +680,8 @@ header .background {
 
 /* Section 6, Contact Form */
 .contact-form {
-  background: #fafafa;
-  min-height: 90vh;
+  background: #2b4353;
+  min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -580,7 +694,9 @@ header .background {
   width: 100%;
 }
 .contact-form h1 {
+  font-size: calc(2vw + 10px);
   text-align: center;
+  color: #fafafa;
 }
 .contact-form .form-container {
   display: -webkit-box;
@@ -615,7 +731,8 @@ header .background {
   transition: 0.2s ease;
 }
 .contact-form .form-container .form .form-group .btn:hover {
-  background: #2b4353;
+  background: #fafafa;
+  color: #e8630a;
 }
 .contact-form .form-container .form .form-group input, .contact-form .form-container .form .form-group textarea {
   padding: 0.8rem 2rem;
@@ -641,11 +758,11 @@ header .background {
 /* Back to Top */
 .back-to-top {
   text-align: center;
-  background: #fafafa;
+  background: #2b4353;
 }
 .back-to-top a {
   text-decoration: none;
-  color: #2b4353;
+  color: #fafafa;
   font-size: 1.2rem;
 }
 

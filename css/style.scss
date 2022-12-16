@@ -41,28 +41,22 @@ body {
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
-header .background {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    position: relative;
-    
+    background-color: $colorBlue;
+    &::after{
+        content: '';
+    }
 }
-.background::before {
-    content: '';
-    background-image: url(/image/pexels-pixabay-417173.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    inset: 0;
-    filter: brightness(45%);
-    background-attachment: fixed;
-}
+
 .wrapper {
     width: calc(90%);
+    max-width: 1440px;
     margin-inline: auto;
+    position: relative;
 }
 
 .navbar {
@@ -71,17 +65,58 @@ header .background {
     align-items: center;
     letter-spacing: 0.1rem;
     position: relative;
+    @include mediaQuery680px(){
+        width: 100%;
+        flex-direction: column;
+        background: $colorOffBlack;
+       position: fixed;
+       z-index: 2;
+       top: 0;
+       left: -100%;
+       height: 100%;
+       justify-content: center;
+       transition: 0.8s ease-in-out;
+    }
+    /* Hamburger Close Button */
+    .hamburger-close{
+        background: transparent;
+        color: $backgroundLightGray;
+        border: none;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 2.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        display: none;
+        @include mediaQuery680px(){
+            display: block;
+        }
+    }
+    .hamburger-close.active{
+        left: -100%;
+    }
     .my-logo {
         color: $colorOrange;
         text-decoration: none;
         padding: 0.3rem 1rem;
         border: 2px solid $colorOrange;
         font-size: 1.5rem;
+        @include mediaQuery680px(){
+            position: absolute;
+            left: 1.5rem;
+            top: 2rem;
+        }
     }
     ul {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        @include mediaQuery680px(){
+            width: 100%;
+            height: 40%;
+            flex-direction: column;
+            font-size: 2rem;
+        }
         li {
             list-style: none;
             display: inline-block;
@@ -91,8 +126,23 @@ header .background {
                 text-decoration: none;
                 color: $backgroundLightGray;
                 transition: 0.2s ease;
+                &::after{
+                    content: '';
+                    background: $colorOrange;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                   margin-top: .3rem;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: 0.2s ease-in;
+                }
                 &:hover{
                     color: $colorOrange;
+                   &::after{
+                    transform: scaleX(1);
+                    transform-origin: left;
+                   }
                 }
                
             }
@@ -100,13 +150,34 @@ header .background {
     }
     
 }
+/* Open Navbar Toggle */
+.navbar.open{
+    left: 0;
+}
+/* Hamburger Menu */
+.hamburger-div{
+    .hamburger-btn{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: $backgroundLightGray;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        @include mediaQuery680px(){
+            display: block;
+        }
+    }
+}
+/* END of Hamburger Menu */
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 80vh;
-    position: relative;
     letter-spacing: 0.1rem;
     h1 {
         font-size: calc(5vw + 10px);
@@ -137,21 +208,23 @@ header .background {
 
 /* About Me Section */
 .section-1 {
-    min-height: 100vh;
+    min-height: 80vh;
     letter-spacing: 0.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    padding: 1rem 0;
+    background: $colorBlue;
 }
+
 .about-me-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-   
+    align-items: flex-start;
+    gap: 2rem;
+   @include mediaQuery780px(){
+    flex-wrap: wrap;
+   }
     h1 {
         font-size: 1.5rem;
         margin: 0;
@@ -160,11 +233,16 @@ header .background {
     
     p {
         margin-top: 0;
-        
+        color: $backgroundLightGray; 
+    }
+    .about-container{
+        h1{
+            color: $backgroundLightGray;
+            font-size: calc(2vw + 10px);
+        }
     }
     .about-me-content {
-        width: calc(50%);
-        padding: 3rem 0 2rem 0;
+        padding: 1rem 0;
         @include mediaQuery780px(){
             width: 100%;
         }
@@ -186,12 +264,13 @@ header .background {
                 z-index: -1;
                 top: 0;
                 left: 0;
-                background: $colorBlue;
+                background: $backgroundLightGray;
                 transition: 0.25s ease-in;
                 transform: scaleX(0);
                 transform-origin: left;
             }
             &:hover{
+                color: $colorOrange;
                 &::after{
                     transform-origin: left;
                     transform: scaleX(1);
@@ -202,11 +281,8 @@ header .background {
             color: $colorOffBlack;
         }
         img {
-            width: 15%;
-            clip-path: circle();
+            width: 80%;
             margin-bottom: 0;
-            position: relative;
-            z-index: 3;
             &::after{
                 content: '';
                 position: absolute;
@@ -220,28 +296,38 @@ header .background {
             }
         }
     }
+    .about-column{
+        width: 50%;
+    }
     .skills-content {
-        border: .5px solid $colorLightGray;
-        box-shadow: 5px 5px 0 2px rgba($color: black, $alpha: 0.3);
         width: 50%;
         @include mediaQuery780px(){
             width: 100%;
         }
         h1{
-            padding: 1rem 0;
+            margin: 0;
+            padding-bottom: 1rem;
+            color: $backgroundLightGray;
+            font-size: calc(2vw + 10px);
         }
         .skills-inner-content {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
+            gap: 1rem;
             place-content: center;
-            padding: 2rem 0;
             p{
-                font-size: 0.8rem;
+                font-size: 0.7rem;
+                color: $backgroundLightGray;
             }
             .skills{
-                img{
-                    width: 20%;
+                text-align: center;
+                border: 1px solid $backgroundLightGray;
+                box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
+                padding: 0.5rem;
+                i{
+                    color: $colorOrange;
+                    font-size: 2rem;
                 }
             }
         }
@@ -249,8 +335,8 @@ header .background {
 }
 /* Modal Section */
 .modal-container{
-    width: 450px;
-    height: 500px;
+    width: 550px;
+    height: 495px;
     background: $colorOffBlack;
     border-radius: 2px;
     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
@@ -299,8 +385,8 @@ header .background {
 
 /* Landing Page Project */
 .section-4{
-min-height: 100vh;
-padding-bottom: 2rem ;
+min-height: 80vh;
+padding: 2rem 0;
 background: $colorBlue;
 letter-spacing: 0.1rem;
 display: flex;
@@ -308,6 +394,7 @@ justify-content: center;
 align-items: center;
 .landing-page-container{
     h1{
+        font-size: calc(2vw + 10px);
         text-align: center;
         color: $backgroundLightGray;
     }
@@ -385,7 +472,7 @@ align-items: center;
         }
         .inner-banner{
             h1{
-                font-size: 3rem;
+                font-size: calc(3vw + 10px);
                 color: $backgroundLightGray;
             }
             .orange-text{
@@ -430,15 +517,16 @@ align-items: center;
 }
 /* Section 6, mini projects */
 .section-6{
-    background: $backgroundLightGray;
-    min-height: 100vh;
+    background: $colorBlue;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
     h1{
+        font-size: calc(2vw + 10px);
         text-align: center;
-        color: $colorOffBlack;
+        color: $backgroundLightGray;
     }
     .mini-project-content{
         display: grid;
@@ -468,6 +556,7 @@ align-items: center;
                 p{
                     margin: 0;
                     padding: 0.5rem;
+                    color: $backgroundLightGray;
                 }
                 .bold-text{
                     font-weight: bold;
@@ -475,6 +564,7 @@ align-items: center;
                 small{
                     padding: 0.5rem;
                     font-style: italic;
+                    color: $backgroundLightGray;
                 }
             }
            
@@ -497,14 +587,16 @@ align-items: center;
 }
 /* Section 6, Contact Form */
 .contact-form{
-    background: $backgroundLightGray;
-    min-height: 90vh;
+    background: $colorBlue;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     h1{
+        font-size: calc(2vw + 10px);
         text-align: center;
+        color: $backgroundLightGray;
     }
     .form-container{
         display: flex;
@@ -528,7 +620,8 @@ align-items: center;
                     color: $backgroundLightGray;
                     transition: 0.2s ease;
                     &:hover{
-                        background: $colorBlue;
+                        background: $backgroundLightGray;
+                        color: $colorOrange;
                     }
                 }
                 input, textarea{
@@ -555,10 +648,10 @@ align-items: center;
 /* Back to Top */
 .back-to-top{
     text-align: center;
-    background: $backgroundLightGray;
+    background: $colorBlue;
     a{
         text-decoration: none;
-        color: $colorBlue;
+        color: $backgroundLightGray;
         font-size: 1.2rem;
     }
 }
