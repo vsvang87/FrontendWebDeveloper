@@ -54,7 +54,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.1rem;
-  position: relative;
   /* Hamburger Close Button */
 }
 @media (max-width: 680px) {
@@ -750,6 +749,22 @@ header {
 }
 .contact-form .form-container .form .error-status {
   text-align: center;
+}
+
+/* Scroll animation */
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 /* Back to Top */

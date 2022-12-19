@@ -63,7 +63,6 @@ header {
     justify-content: space-between;
     align-items: center;
     letter-spacing: 0.1rem;
-    position: relative;
     @include mediaQuery680px(){
         width: 100%;
         flex-direction: column;
@@ -441,11 +440,12 @@ align-items: center;
 /* Section 5, Banner */
 .section-5{
     min-height: 30vh;
-    background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
+   background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    
     padding: 1rem 0;
     display: flex;
     justify-content: center;
@@ -576,7 +576,6 @@ align-items: center;
                 img{
                     width: 100%;
                    max-height: 550px;
-                    
                 }
             }
         }
@@ -643,6 +642,17 @@ align-items: center;
             }
         }
     }
+}
+/* Scroll animation */
+.reveal{
+position: relative;
+transform: translateY(150px);
+opacity: 0;
+transition: 0.5s ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 /* Back to Top */
 .back-to-top{
