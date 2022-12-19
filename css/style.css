@@ -28,11 +28,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background-color: #2b4353;
-}
-header::after {
-  content: "";
 }
 
 .wrapper {
@@ -72,8 +73,8 @@ header::after {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transition: 0.8s ease-in-out;
-    transition: 0.8s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
 }
 .navbar .hamburger-close {
@@ -82,7 +83,7 @@ header::after {
   border: none;
   font-size: 1.5rem;
   position: absolute;
-  top: 2.5rem;
+  top: 2.2rem;
   right: 1.5rem;
   cursor: pointer;
   display: none;
@@ -123,6 +124,7 @@ header::after {
   .navbar ul {
     width: 100%;
     height: 40%;
+    padding-right: 3rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -180,7 +182,7 @@ header::after {
   font-size: 1.5rem;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -15px;
   display: none;
 }
 @media (max-width: 680px) {
@@ -194,9 +196,9 @@ header::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -247,45 +249,34 @@ header::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
-@media (max-width: 780px) {
+@media (max-width: 950px) {
   .about-me-container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-}
-.about-me-container h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #222831;
 }
 .about-me-container p {
   margin-top: 0;
   color: #fafafa;
 }
-.about-me-container .about-container h1 {
-  color: #fafafa;
-  font-size: calc(2vw + 10px);
-}
-.about-me-container .about-me-content {
-  padding: 1rem 0;
-}
-@media (max-width: 780px) {
-  .about-me-container .about-me-content {
-    width: 100%;
-  }
-}
 .about-me-container .about-me-content .read-btn {
   padding: 0.5rem 1rem;
   background: #e8630a;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
   color: #fafafa;
@@ -309,6 +300,7 @@ header::after {
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
+  border-radius: 5px;
 }
 .about-me-container .about-me-content .read-btn:hover {
   color: #e8630a;
@@ -320,60 +312,44 @@ header::after {
           transform: scaleX(1);
 }
 .about-me-container .about-me-content h1 {
-  color: #222831;
-}
-.about-me-container .about-me-content img {
-  width: 80%;
-  margin-bottom: 0;
-}
-.about-me-container .about-me-content img::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2b4353;
+  color: #e8630a;
+  margin: 0;
+  padding-bottom: 1rem;
 }
 .about-me-container .about-column {
-  width: 50%;
+  width: 48%;
 }
-.about-me-container .skills-content {
-  width: 50%;
-}
-@media (max-width: 780px) {
-  .about-me-container .skills-content {
+@media (max-width: 950px) {
+  .about-me-container .about-column {
     width: 100%;
   }
 }
-.about-me-container .skills-content h1 {
-  margin: 0;
-  padding-bottom: 1rem;
-  color: #fafafa;
-  font-size: calc(2vw + 10px);
+.about-me-container .skills h1 {
+  padding: 3rem 0 1rem 0;
 }
-.about-me-container .skills-content .skills-inner-content {
+.about-me-container .skills .skill-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  place-content: center;
 }
-.about-me-container .skills-content .skills-inner-content p {
-  font-size: 0.7rem;
-  color: #fafafa;
+@media (max-width: 680px) {
+  .about-me-container .skills .skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.about-me-container .skills-content .skills-inner-content .skills {
+.about-me-container .skills .skill-container .skill-column {
+  width: 80%;
+  padding: 1rem;
   text-align: center;
-  border: 1px solid #fafafa;
-  -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
+  border: 1px solid #132743;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 0 0 rgba(34, 40, 49, 0.3);
+          box-shadow: 5px 5px 0 0 rgba(34, 40, 49, 0.3);
 }
-.about-me-container .skills-content .skills-inner-content .skills i {
-  color: #e8630a;
-  font-size: 2rem;
+.about-me-container .skills .skill-container .skill-column i {
+  font-size: 3rem;
+  color: #132743;
+  padding-bottom: 0.5rem;
 }
 
 /* Modal Section */
@@ -381,7 +357,7 @@ header::after {
   width: 550px;
   height: 495px;
   background: #222831;
-  border-radius: 2px;
+  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
   margin: auto auto;
@@ -554,7 +530,7 @@ header::after {
   }
 }
 .section-5 .banner-content .inner-banner h1 {
-  font-size: calc(3vw + 10px);
+  font-size: calc(3vw + 20px);
   color: #fafafa;
 }
 .section-5 .banner-content .inner-banner .orange-text {
@@ -740,8 +716,8 @@ header::after {
   outline: none;
   border: 1px solid #b8b6b3;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 780px) {
   .contact-form .form-container .form .form-group input, .contact-form .form-container .form .form-group textarea {

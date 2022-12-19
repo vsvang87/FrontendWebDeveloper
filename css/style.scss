@@ -45,12 +45,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     background-color: $colorBlue;
-    &::after{
-        content: '';
-    }
 }
+
 
 .wrapper {
     width: calc(90%);
@@ -75,7 +74,7 @@ header {
        left: -100%;
        height: 100%;
        justify-content: center;
-       transition: 0.8s ease-in-out;
+       transition: 0.5s ease-in-out;
     }
     /* Hamburger Close Button */
     .hamburger-close{
@@ -84,7 +83,7 @@ header {
         border: none;
         font-size: 1.5rem;
         position: absolute;
-        top: 2.5rem;
+        top: 2.2rem;
         right: 1.5rem;
         cursor: pointer;
         display: none;
@@ -114,6 +113,7 @@ header {
         @include mediaQuery680px(){
             width: 100%;
             height: 40%;
+            padding-right: 3rem;
             flex-direction: column;
             font-size: 2rem;
         }
@@ -164,7 +164,7 @@ header {
         font-size: 1.5rem;
         position: absolute;
         right: 0;
-        top: 0;
+        top: -15px;
         display: none;
         @include mediaQuery680px(){
             display: block;
@@ -175,7 +175,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     min-height: 80vh;
     letter-spacing: 0.1rem;
@@ -218,38 +218,25 @@ header {
 }
 
 .about-me-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-   @include mediaQuery780px(){
-    flex-wrap: wrap;
-   }
-    h1 {
-        font-size: 1.5rem;
-        margin: 0;
-        color: $colorOffBlack;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 1rem;
+    @include mediaQuery950px(){
+        flex-direction: column;
+        align-items: center;
     }
-    
     p {
         margin-top: 0;
         color: $backgroundLightGray; 
     }
-    .about-container{
-        h1{
-            color: $backgroundLightGray;
-            font-size: calc(2vw + 10px);
-        }
-    }
+    
     .about-me-content {
-        padding: 1rem 0;
-        @include mediaQuery780px(){
-            width: 100%;
-        }
         .read-btn{
             padding: 0.5rem 1rem;
             background: $colorOrange;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
             color: $backgroundLightGray;
@@ -268,77 +255,65 @@ header {
                 transition: 0.25s ease-in;
                 transform: scaleX(0);
                 transform-origin: left;
+                border-radius: 5px;
             }
             &:hover{
                 color: $colorOrange;
+                
                 &::after{
                     transform-origin: left;
                     transform: scaleX(1);
+                    
                 }
             }
         }
         h1{
-            color: $colorOffBlack;
-        }
-        img {
-            width: 80%;
-            margin-bottom: 0;
-            &::after{
-                content: '';
-                position: absolute;
-                z-index: -1;
-                top: 20%;
-                left: 0;
-                
-                width: 100%;
-                height: 100%;
-                background: $colorBlue;
-            }
+            color: $colorOrange;
+            margin: 0;
+            padding-bottom: 1rem;
         }
     }
     .about-column{
-        width: 50%;
-    }
-    .skills-content {
-        width: 50%;
-        @include mediaQuery780px(){
+        width: 48%;
+        @include mediaQuery950px(){
             width: 100%;
         }
-        h1{
-            margin: 0;
-            padding-bottom: 1rem;
-            color: $backgroundLightGray;
-            font-size: calc(2vw + 10px);
+    }
+  .skills{
+    h1{
+        padding: 3rem 0 1rem 0;
+    }
+    .skill-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @include mediaQuery680px(){
+            grid-template-columns: repeat(2, 1fr);
         }
-        .skills-inner-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 1rem;
-            place-content: center;
-            p{
-                font-size: 0.7rem;
-                color: $backgroundLightGray;
-            }
-            .skills{
-                text-align: center;
-                border: 1px solid $backgroundLightGray;
-                box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
-                padding: 0.5rem;
-                i{
-                    color: $colorOrange;
-                    font-size: 2rem;
-                }
+        .skill-column{
+            width: 80%;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid $navLinkColor;
+            border-radius: 5px;
+            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
+            i{
+                font-size: 3rem;
+                color: $navLinkColor;
+                padding-bottom: 0.5rem;
+                
             }
         }
     }
+  }
+    
 }
 /* Modal Section */
 .modal-container{
     width: 550px;
     height: 495px;
     background: $colorOffBlack;
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
     margin: auto auto;
     position: fixed;
@@ -472,7 +447,7 @@ align-items: center;
         }
         .inner-banner{
             h1{
-                font-size: calc(3vw + 10px);
+                font-size: calc(3vw + 20px);
                 color: $backgroundLightGray;
             }
             .orange-text{
@@ -629,8 +604,9 @@ align-items: center;
                     width: 50%;
                     outline: none;
                     border: 1px solid $colorLightGray;
+                 
                     font-family: Arial, Helvetica, sans-serif;
-                    box-shadow: 1px 2px 0 0 rgba($color: #000000, $alpha: 0.3);
+                    box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
                     @include mediaQuery780px(){
                         width: 70%;
                     }
