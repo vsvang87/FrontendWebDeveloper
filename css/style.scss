@@ -207,39 +207,42 @@ header {
                 color: $colorOrange;
             }
         }
-        .resume-btn {
-            margin-top: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: $colorOrange;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            color: $backgroundLightGray;
-            transition: 0.2s ease;
-            position: relative;
-            z-index: 1;
-            &::after{
-                content: '';
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                background: $backgroundLightGray;
-                transition: 0.25s ease-in;
-                transform: scaleX(0);
-                transform-origin: left;
+        .resume-button-div {
+            padding-top: 0.3rem;
+            .resume-btn {
+                margin-top: 0.5rem;
+                padding: 0.5rem 1rem;
+                background: $colorOrange;
+                border: none;
                 border-radius: 5px;
-            }
-            &:hover{
-                color: $colorOrange;
-                
+                cursor: pointer;
+                font-size: 1rem;
+                color: $backgroundLightGray;
+                transition: 0.2s ease;
+                position: relative;
+                z-index: 1;
                 &::after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    background: $backgroundLightGray;
+                    transition: 0.25s ease-in;
+                    transform: scaleX(0);
                     transform-origin: left;
-                    transform: scaleX(1);
+                    border-radius: 5px;
+                }
+                &:hover{
+                    color: $colorOrange;
                     
+                    &::after{
+                        transform-origin: left;
+                        transform: scaleX(1);
+                        
+                    }
                 }
             }
         }
@@ -275,6 +278,7 @@ header {
     }
     
     .about-me-content {
+        line-height: 1.3rem;
         .read-btn{
             padding: 0.5rem 1rem;
             background: $colorOrange;
@@ -357,6 +361,7 @@ header {
 }
 /* Modal Section */
 .modal-container{
+    line-height: 1.3rem;
     width: 550px;
     height: 495px;
     background: $colorOffBlack;
@@ -435,6 +440,8 @@ align-items: center;
             justify-items: center;
         }
         .landing-page-column{
+            position: relative;
+            line-height: 1.3rem;
             border: .5px solid $colorLightGray;
             border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
@@ -445,26 +452,32 @@ align-items: center;
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
+                height: 280px;
                 p{
-                    padding: 0.5rem;
+                    padding: 0.2rem;
                 }
                 .bold-text{
                     font-weight: bold;
                 }
                 small{
-                    padding: 0.5rem;
+                    padding: 0.2rem;
                     font-style: italic;
                 }
-                .view-btn{
-                    background: $colorOrange;
-                    padding: 0.2rem 0.5rem;
-                    margin-left: 0.5rem;
-                   border-radius: 5px;
-                   transition: 0.2s ease-in-out;
-                   &:hover{
-                    background: $backgroundLightGray;
-                    color: $colorBlue;
-                   }
+                .view-github-button {
+                    height: 50px;
+                    position: absolute;
+                    bottom: -15px;
+                    .view-btn{
+                        background: $colorOrange;
+                        padding: 0.2rem 0.5rem;
+                        margin-left: 0.5rem;
+                       border-radius: 5px;
+                       transition: 0.2s ease-in-out;
+                       &:hover{
+                        background: $backgroundLightGray;
+                        color: $colorBlue;
+                       }
+                    }
                 }
             }
             img{
@@ -564,6 +577,7 @@ align-items: center;
         color: $backgroundLightGray;
     }
     .mini-project-content{
+        line-height: 1.3rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.2rem;
@@ -575,6 +589,7 @@ align-items: center;
             justify-items: center;
         }
         .mini-inner-content{
+            position: relative;
             border: .5px solid $colorLightGray;
             border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
@@ -584,29 +599,35 @@ align-items: center;
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
+                height: 280px;
                 p{
-                    padding: 0.5rem;
+                    padding: 0.2rem;
                     
                 }
                 .bold-text{
                     font-weight: bold;
                 }
                 small{
-                    padding: 0.5rem;
+                    padding: 0.2rem;
                     font-style: italic;
                 }
             }
-            .view-btn{
-                background: $colorOrange;
-                    padding: 0.2rem 0.5rem;
-                    margin-left: 0.5rem;
-                   border-radius: 5px;
-                   transition: 0.2s ease-in-out;
-                   color: $backgroundLightGray;
-                   &:hover{
-                    background: $backgroundLightGray;
-                    color: $colorBlue;
-                   }
+            .view-github-button {
+                height: 50px;
+                    position: absolute;
+                    bottom: -15px;
+                .view-btn{
+                    background: $colorOrange;
+                        padding: 0.2rem 0.5rem;
+                        margin-left: 0.2rem;
+                       border-radius: 5px;
+                       transition: 0.2s ease-in-out;
+                       color: $backgroundLightGray;
+                       &:hover{
+                        background: $backgroundLightGray;
+                        color: $colorBlue;
+                       }
+                }
             }
            
             a{

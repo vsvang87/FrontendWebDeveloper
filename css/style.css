@@ -227,7 +227,10 @@ header {
 .container .intro-content a:hover {
   color: #e8630a;
 }
-.container .intro-content .resume-btn {
+.container .intro-content .resume-button-div {
+  padding-top: 0.3rem;
+}
+.container .intro-content .resume-button-div .resume-btn {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   background: #e8630a;
@@ -241,7 +244,7 @@ header {
   position: relative;
   z-index: 1;
 }
-.container .intro-content .resume-btn::after {
+.container .intro-content .resume-button-div .resume-btn::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -258,10 +261,10 @@ header {
           transform-origin: left;
   border-radius: 5px;
 }
-.container .intro-content .resume-btn:hover {
+.container .intro-content .resume-button-div .resume-btn:hover {
   color: #e8630a;
 }
-.container .intro-content .resume-btn:hover::after {
+.container .intro-content .resume-button-div .resume-btn:hover::after {
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: scaleX(1);
@@ -312,6 +315,9 @@ header {
 .about-me-container p {
   margin-top: 0;
   color: #fafafa;
+}
+.about-me-container .about-me-content {
+  line-height: 1.3rem;
 }
 .about-me-container .about-me-content .read-btn {
   padding: 0.5rem 1rem;
@@ -399,6 +405,7 @@ header {
 
 /* Modal Section */
 .modal-container {
+  line-height: 1.3rem;
   width: 550px;
   height: 495px;
   background: #222831;
@@ -497,6 +504,8 @@ header {
   }
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column {
+  position: relative;
+  line-height: 1.3rem;
   border: 0.5px solid #b8b6b3;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
@@ -510,18 +519,24 @@ header {
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description {
   padding: 0.8rem 0.3rem;
   color: #fafafa;
+  height: 280px;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description p {
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .bold-text {
   font-weight: bold;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description small {
-  padding: 0.5rem;
+  padding: 0.2rem;
   font-style: italic;
 }
-.section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-btn {
+.section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button {
+  height: 50px;
+  position: absolute;
+  bottom: -15px;
+}
+.section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn {
   background: #e8630a;
   padding: 0.2rem 0.5rem;
   margin-left: 0.5rem;
@@ -529,7 +544,7 @@ header {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-.section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-btn:hover {
+.section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn:hover {
   background: #fafafa;
   color: #2b4353;
 }
@@ -647,6 +662,7 @@ header {
   color: #fafafa;
 }
 .section-6 .mini-project-content {
+  line-height: 1.3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
@@ -663,6 +679,7 @@ header {
   }
 }
 .section-6 .mini-project-content .mini-inner-content {
+  position: relative;
   border: 0.5px solid #b8b6b3;
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
@@ -676,27 +693,33 @@ header {
 .section-6 .mini-project-content .mini-inner-content .description {
   padding: 0.8rem 0.3rem;
   color: #fafafa;
+  height: 280px;
 }
 .section-6 .mini-project-content .mini-inner-content .description p {
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 .section-6 .mini-project-content .mini-inner-content .description .bold-text {
   font-weight: bold;
 }
 .section-6 .mini-project-content .mini-inner-content .description small {
-  padding: 0.5rem;
+  padding: 0.2rem;
   font-style: italic;
 }
-.section-6 .mini-project-content .mini-inner-content .view-btn {
+.section-6 .mini-project-content .mini-inner-content .view-github-button {
+  height: 50px;
+  position: absolute;
+  bottom: -15px;
+}
+.section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn {
   background: #e8630a;
   padding: 0.2rem 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
   border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   color: #fafafa;
 }
-.section-6 .mini-project-content .mini-inner-content .view-btn:hover {
+.section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn:hover {
   background: #fafafa;
   color: #2b4353;
 }
