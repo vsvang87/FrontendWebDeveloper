@@ -127,7 +127,7 @@ header {
             list-style: none;
             display: inline-block;
             cursor: pointer;
-            padding:1rem;
+            padding:1rem 2rem;
             a {
                 text-decoration: none;
                 color: $backgroundLightGray;
@@ -207,6 +207,42 @@ header {
                 color: $colorOrange;
             }
         }
+        .resume-btn {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: $colorOrange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: $backgroundLightGray;
+            transition: 0.2s ease;
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                background: $backgroundLightGray;
+                transition: 0.25s ease-in;
+                transform: scaleX(0);
+                transform-origin: left;
+                border-radius: 5px;
+            }
+            &:hover{
+                color: $colorOrange;
+                
+                &::after{
+                    transform-origin: left;
+                    transform: scaleX(1);
+                    
+                }
+            }
+        }
     }
     
     
@@ -214,11 +250,11 @@ header {
 
 /* About Me Section */
 .section-1 {
-    min-height: 100vh;
+    min-height: 50vh;
     letter-spacing: 0.1rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem 0;
     background: $colorBlue;
     gap: 1.5rem;
