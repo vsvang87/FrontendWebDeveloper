@@ -55,7 +55,13 @@ header {
     min-height: 100vh;
     background-color: $colorBlue;
 }
-
+header::after {
+    content: '';
+    background: $backgroundLightGray;
+    width: 90%;
+    height: 2px;
+    display: block;
+}
 
 .wrapper {
     width: calc(90%);
@@ -181,7 +187,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 80vh;
     letter-spacing: 0.1rem;
@@ -258,15 +264,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 1rem 0;
     background: $colorBlue;
-    gap: 1.5rem;
 }
 
 .about-me-container {
    display: flex;
    justify-content: center;
-   align-items: flex-start;
+   align-items: center;
    gap: 1.5rem;
     @include mediaQuery950px(){
         flex-direction: column;
@@ -357,7 +363,7 @@ header {
         }
     }
   }
-    
+ 
 }
 /* Modal Section */
 .modal-container{
@@ -415,7 +421,8 @@ header {
 /* Landing Page Project */
 .section-4{
 min-height: 90vh;
-padding: 2rem 0;
+padding-top: 1rem;
+padding-bottom: 2.5rem;
 background: $colorBlue;
 letter-spacing: 0.1rem;
 display: flex;
@@ -570,7 +577,8 @@ align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    flex-direction: column;
+    padding: 1.5rem 0;
     h1{
         font-size: calc(2vw + 10px);
         text-align: center;
@@ -599,7 +607,7 @@ align-items: center;
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
-                height: 280px;
+                height: 300px;
                 p{
                     padding: 0.2rem;
                     
@@ -647,7 +655,8 @@ align-items: center;
         }
     }
 }
-/* Section 6, Contact Form */
+
+/* Section 7, Contact Form */
 .contact-form{
     background: $colorBlue;
     min-height: 50vh;
