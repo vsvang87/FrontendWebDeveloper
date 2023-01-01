@@ -235,49 +235,6 @@ header::after {
 .container .intro-content a:hover {
   color: #e8630a;
 }
-.container .intro-content .resume-button-div {
-  padding-top: 0.3rem;
-}
-.container .intro-content .resume-button-div .resume-btn {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: #e8630a;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  color: #fafafa;
-  -webkit-transition: 0.2s ease;
-  transition: 0.2s ease;
-  position: relative;
-  z-index: 1;
-}
-.container .intro-content .resume-button-div .resume-btn::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  background: #fafafa;
-  -webkit-transition: 0.25s ease-in;
-  transition: 0.25s ease-in;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  border-radius: 5px;
-}
-.container .intro-content .resume-button-div .resume-btn:hover {
-  color: #e8630a;
-}
-.container .intro-content .resume-button-div .resume-btn:hover::after {
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
 
 /* About Me Section */
 .section-1 {

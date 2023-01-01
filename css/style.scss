@@ -213,45 +213,7 @@ header::after {
                 color: $colorOrange;
             }
         }
-        .resume-button-div {
-            padding-top: 0.3rem;
-            .resume-btn {
-                margin-top: 0.5rem;
-                padding: 0.5rem 1rem;
-                background: $colorOrange;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1rem;
-                color: $backgroundLightGray;
-                transition: 0.2s ease;
-                position: relative;
-                z-index: 1;
-                &::after{
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    left: 0;
-                    background: $backgroundLightGray;
-                    transition: 0.25s ease-in;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    border-radius: 5px;
-                }
-                &:hover{
-                    color: $colorOrange;
-                    
-                    &::after{
-                        transform-origin: left;
-                        transform: scaleX(1);
-                        
-                    }
-                }
-            }
-        }
+        
     }
     
     
