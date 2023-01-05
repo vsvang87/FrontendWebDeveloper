@@ -227,6 +227,7 @@ header {
     align-items: center;
     flex-direction: column;
     background: $colorBlue;
+    padding-bottom: 2rem;
 }
 
 
@@ -391,7 +392,7 @@ justify-content: center;
 align-items: center;
 .landing-page-container{
     h1{
-        font-size: calc(2vw + 8px);
+        font-size: 2rem;
         text-align: center;
         color: $backgroundLightGray;
     }
@@ -420,7 +421,7 @@ align-items: center;
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
-                height: 280px;
+                height: 315px;
                 p {
                     padding: 0 0.5rem;
                 }
@@ -543,7 +544,7 @@ align-items: center;
     padding: 1.5rem 0;
     letter-spacing: 0.1rem;
     h1{
-        font-size: calc(2vw + 8px);
+        font-size: 2rem;
         text-align: center;
         color: $backgroundLightGray;
     }
@@ -570,7 +571,7 @@ align-items: center;
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
-                height: 300px;
+                height: 315px;
                 p {
                     padding: 0 0.5rem;
                 }
@@ -628,7 +629,7 @@ align-items: center;
     align-items: center;
     width: 100%;
     h1{
-        font-size: calc(2vw + 10px);
+        font-size: 2rem;
         text-align: center;
         color: $backgroundLightGray;
     }

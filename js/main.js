@@ -34,8 +34,8 @@ navLink.forEach((link) => {
 //form submit handler
 async function handleSubmit(event) {
   event.preventDefault();
-  var status = document.getElementById("status");
-  var data = new FormData(event.target);
+  let status = document.getElementById("status");
+  let data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
     body: data,

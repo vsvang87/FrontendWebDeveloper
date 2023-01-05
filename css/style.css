@@ -252,6 +252,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #2b4353;
+  padding-bottom: 2rem;
 }
 
 .about-me-container {
@@ -447,7 +448,7 @@ header {
           align-items: center;
 }
 .section-4 .landing-page-container h1 {
-  font-size: calc(2vw + 8px);
+  font-size: 2rem;
   text-align: center;
   color: #fafafa;
 }
@@ -485,7 +486,7 @@ header {
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description {
   padding: 0.8rem 0.3rem;
   color: #fafafa;
-  height: 280px;
+  height: 315px;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description p {
   padding: 0 0.5rem;
@@ -629,7 +630,7 @@ header {
   letter-spacing: 0.1rem;
 }
 .section-6 h1 {
-  font-size: calc(2vw + 8px);
+  font-size: 2rem;
   text-align: center;
   color: #fafafa;
 }
@@ -665,7 +666,7 @@ header {
 .section-6 .mini-project-content .mini-inner-content .description {
   padding: 0.8rem 0.3rem;
   color: #fafafa;
-  height: 300px;
+  height: 315px;
 }
 .section-6 .mini-project-content .mini-inner-content .description p {
   padding: 0 0.5rem;
@@ -727,7 +728,7 @@ header {
   width: 100%;
 }
 .contact-form h1 {
-  font-size: calc(2vw + 10px);
+  font-size: 2rem;
   text-align: center;
   color: #fafafa;
 }
