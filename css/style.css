@@ -217,14 +217,20 @@ header {
   padding: 0.3 0;
   color: #fafafa;
 }
-.container .intro-content a {
+.container .intro-content .cv-btn {
+  text-decoration: none;
+  padding: 0.3rem 1rem;
+  background: #e8630a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
   color: #fafafa;
-  font-size: 1.3rem;
-  padding-right: 0.3rem;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-.container .intro-content a:hover {
+.container .intro-content .cv-btn:hover {
+  background: #fafafa;
   color: #e8630a;
 }
 
@@ -680,7 +686,7 @@ header {
 .section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn {
   background: #e8630a;
   padding: 0.2rem 0.5rem;
-  margin-left: 0.2rem;
+  margin-left: 0.5rem;
   border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;

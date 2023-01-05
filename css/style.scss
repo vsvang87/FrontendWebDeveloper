@@ -197,12 +197,18 @@ header {
             padding: .3 0;
             color: $backgroundLightGray;
         }
-        a{
+        .cv-btn{
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            background: $colorOrange;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
             color: $backgroundLightGray;
-            font-size: 1.3rem;
-            padding-right: .3rem;
-            transition: 0.2s ease-in;
-            &:hover{
+            transition: 0.2s ease;
+            &:hover {
+                background: $backgroundLightGray;
                 color: $colorOrange;
             }
         }
@@ -584,7 +590,7 @@ align-items: center;
                 .view-btn{
                     background: $colorOrange;
                         padding: 0.2rem 0.5rem;
-                        margin-left: 0.2rem;
+                        margin-left: 0.5rem;
                        border-radius: 5px;
                        transition: 0.2s ease-in-out;
                        color: $backgroundLightGray;
