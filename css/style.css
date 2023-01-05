@@ -480,7 +480,7 @@ header {
 }
 @media (max-width: 680px) {
   .section-4 .landing-page-container .landing-page-content .landing-page-column {
-    width: 80%;
+    width: 100%;
   }
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description {
@@ -660,7 +660,7 @@ header {
 }
 @media (max-width: 680px) {
   .section-6 .mini-project-content .mini-inner-content {
-    width: 80%;
+    width: 100%;
   }
 }
 .section-6 .mini-project-content .mini-inner-content .description {

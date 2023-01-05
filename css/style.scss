@@ -415,7 +415,7 @@ align-items: center;
             border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
-                width: 80%;
+                width: 100%;
             }
             
             .description{
@@ -566,7 +566,7 @@ align-items: center;
             border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
-                width: 80%;
+                width: 100%;
             }
             .description{
                 padding: 0.8rem 0.3rem;
