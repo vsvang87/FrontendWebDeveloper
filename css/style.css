@@ -620,6 +620,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.5rem 0;
+  letter-spacing: 0.1rem;
 }
 .section-6 h1 {
   font-size: calc(2vw + 8px);
