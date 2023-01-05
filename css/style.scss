@@ -7,7 +7,6 @@ $colorBlue: #2b4353;
 $colorOffBlack: #222831;
 $titleFontSize: 5vw;
 
-
 @mixin mediaQuery1120px(){
     @media(max-width: 1120px) {
         @content;
@@ -55,13 +54,7 @@ header {
     min-height: 100vh;
     background-color: $colorBlue;
 }
-header::after {
-    content: '';
-    background: $backgroundLightGray;
-    width: 90%;
-    height: 2px;
-    display: block;
-}
+
 
 .wrapper {
     width: calc(90%);
@@ -192,7 +185,7 @@ header::after {
     min-height: 80vh;
     letter-spacing: 0.1rem;
     h1 {
-        font-size: calc(3vw + 26px);
+        font-size: calc(2vw + 20px);
         color: $backgroundLightGray;
         margin: 0;
     }
@@ -227,9 +220,9 @@ header::after {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem 0;
     background: $colorBlue;
 }
+
 
 .about-me-container {
    display: flex;
@@ -392,7 +385,7 @@ justify-content: center;
 align-items: center;
 .landing-page-container{
     h1{
-        font-size: calc(2vw + 10px);
+        font-size: calc(2vw + 8px);
         text-align: center;
         color: $backgroundLightGray;
     }
@@ -422,14 +415,15 @@ align-items: center;
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
                 height: 280px;
-                p{
-                    padding: 0.2rem;
+                p {
+                    padding: 0 0.5rem;
                 }
                 .bold-text{
                     font-weight: bold;
+                    margin: 0;
                 }
                 small{
-                    padding: 0.2rem;
+                    padding: 0 0.5rem;
                     font-style: italic;
                 }
                 .view-github-button {
@@ -542,7 +536,7 @@ align-items: center;
     flex-direction: column;
     padding: 1.5rem 0;
     h1{
-        font-size: calc(2vw + 10px);
+        font-size: calc(2vw + 8px);
         text-align: center;
         color: $backgroundLightGray;
     }
@@ -570,15 +564,15 @@ align-items: center;
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
                 height: 300px;
-                p{
-                    padding: 0.2rem;
-                    
+                p {
+                    padding: 0 0.5rem;
                 }
                 .bold-text{
                     font-weight: bold;
+                    margin: 0;
                 }
                 small{
-                    padding: 0.2rem;
+                    padding: 0 0.5rem;
                     font-style: italic;
                 }
             }
