@@ -206,10 +206,11 @@ header {
             cursor: pointer;
             font-size: 1rem;
             color: $backgroundLightGray;
+            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
             &:hover {
                 background: $backgroundLightGray;
-                color: $colorOrange;
+                color: $colorBlue;
             }
         }
         
@@ -255,6 +256,7 @@ header {
             cursor: pointer;
             font-size: 1rem;
             color: $backgroundLightGray;
+            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
             position: relative;
             z-index: 1;
@@ -273,7 +275,7 @@ header {
                 border-radius: 5px;
             }
             &:hover{
-                color: $colorOrange;
+                color: $colorBlue;
                 
                 &::after{
                     transform-origin: left;
@@ -329,9 +331,9 @@ header {
 }
 /* Modal Section */
 .modal-container{
-    line-height: 1.3rem;
+    line-height: 1.7rem;
     width: 550px;
-    height: 495px;
+    height: 550px;
     background: $colorOffBlack;
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
@@ -364,8 +366,8 @@ header {
         color: $backgroundLightGray;
         width: 90%;
         margin-inline: auto;
-        padding: 2rem 0;
-        letter-spacing: 0.05rem;
+        padding: 4rem 0 1rem 0;
+        
         h1{
             color: $colorOrange;
         }
@@ -657,7 +659,7 @@ align-items: center;
                     transition: 0.2s ease;
                     &:hover{
                         background: $backgroundLightGray;
-                        color: $colorOrange;
+                        color: $colorBlue;
                     }
                 }
                 input, textarea{
