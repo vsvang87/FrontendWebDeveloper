@@ -1,3 +1,6 @@
+import { projectData } from "./data.js";
+import { moreProjectData } from "./moreprojects.js";
+
 const form = document.getElementById("my-form");
 const modalCloseBtn = document.getElementById("modal-btn");
 const readMoreBtn = document.getElementById("read-more-btn");
@@ -6,6 +9,8 @@ const navbar = document.getElementById("navbar");
 const hamburgerBtn = document.getElementById("hamburger-btn");
 const hamburgerCloseBtn = document.getElementById("hamburger-close");
 const navLink = document.querySelectorAll(".nav-link");
+const projectContainer = document.getElementById("project-render-container");
+const moreProjectContainer = document.getElementById("more-project-container");
 
 //open modal
 readMoreBtn.addEventListener("click", () => {
@@ -31,6 +36,76 @@ navLink.forEach((link) => {
   });
 });
 
+//rendering first 3 projects data into HTML
+function renderProjectToHTMl() {
+  projectData.forEach((project) => {
+    const { id, name, img, stacks, description, url, github } = project;
+    projectContainer.innerHTML += `
+    <div class="landing-page-column reveal">
+                <div class="img-div">
+                  <img src="${img}" alt="" />
+                </div>
+                <div class="description">
+                  <p class="bold-text">${name}</p>
+                  <small>${stacks}</small>
+                  <p>
+                    ${description}
+                  </p>
+                  <div class="view-github-button">
+                    <a
+                      href="${url}"
+                      target="_blank"
+                      class="view-btn"
+                      >View</a
+                    >
+                    <a
+                      href="${github}"
+                      target="_blank"
+                      class="view-btn"
+                      >Github</a
+                    >
+                  </div>
+                </div>
+              </div>
+    `;
+  });
+}
+renderProjectToHTMl();
+
+//rendering the lat 3 projects data into HTML
+function moreProjects() {
+  moreProjectData.forEach((project) => {
+    const { id, name, img, stacks, description, url, github } = project;
+    moreProjectContainer.innerHTML += `
+    <div class="mini-inner-content reveal">
+              <div class="img-div">
+                <img src="${img}" alt="" />
+              </div>
+              <div class="description">
+                <p class="bold-text">${name}</p>
+                <small>${stacks}</small>
+                <p>
+                  ${description}
+                </p>
+                <div class="view-github-button">
+                  <a
+                    href="${url}"
+                    target="_blank"
+                    class="view-btn"
+                    >View</a
+                  >
+                  <a
+                    href="${github}"
+                    target="_blank"
+                    class="view-btn"
+                    >Github</a
+                  >
+                </div>
+              </div>
+    `;
+  });
+}
+moreProjects();
 //form submit handler
 async function handleSubmit(event) {
   event.preventDefault();
