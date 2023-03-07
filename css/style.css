@@ -6,7 +6,7 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 html::-webkit-scrollbar-thumb {
-  background: #e8630a;
+  background: #ff5866;
 }
 html::-webkit-scrollbar-track {
   background: #b8b6b3;
@@ -35,7 +35,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-color: #2b4353;
+  background-color: #00344e;
 }
 
 .wrapper {
@@ -98,17 +98,16 @@ header {
   left: -100%;
 }
 .navbar .my-logo {
-  color: #e8630a;
+  color: #ff5866;
   text-decoration: none;
   padding: 0.3rem 1rem;
-  border: 2px solid #e8630a;
-  border-radius: 5px;
+  border: 2px solid #ff5866;
   font-size: 1.5rem;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 .navbar .my-logo:hover {
-  background: #e8630a;
+  background: #ff5866;
   color: #fafafa;
 }
 @media (max-width: 680px) {
@@ -154,7 +153,7 @@ header {
 }
 .navbar ul li a::after {
   content: "";
-  background: #e8630a;
+  background: #ff5866;
   display: block;
   width: 100%;
   height: 2px;
@@ -167,7 +166,7 @@ header {
   transition: 0.2s ease-in;
 }
 .navbar ul li a:hover {
-  color: #e8630a;
+  color: #ff5866;
 }
 .navbar ul li a:hover::after {
   -webkit-transform: scaleX(1);
@@ -219,7 +218,7 @@ header {
   margin: 0;
 }
 .container .orange-text {
-  color: #e8630a;
+  color: #ff5866;
 }
 .container .intro-content p {
   margin: 0.8rem 0;
@@ -231,9 +230,8 @@ header {
 .container .intro-content .cv-btn {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #e8630a;
+  background: #ff5866;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-size: calc(0.5vw + 0.6rem);
   color: #fafafa;
@@ -244,7 +242,7 @@ header {
 }
 .container .intro-content .cv-btn:hover {
   background: #fafafa;
-  color: #2b4353;
+  color: #00344e;
 }
 .container .intro-content .soft-skill-list {
   padding: 0;
@@ -258,7 +256,7 @@ header {
 }
 .container .intro-content .soft-skill-list li::before {
   content: "✔";
-  color: #e8630a;
+  color: #ff5866;
   padding-right: 0.5rem;
 }
 
@@ -279,7 +277,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #2b4353;
+  background: #00344e;
   padding-bottom: 2rem;
 }
 
@@ -316,9 +314,8 @@ header {
 .about-me-container .about-me-content .read-btn {
   font-size: calc(0.5vw + 0.6rem);
   padding: 0.5rem 1rem;
-  background: #e8630a;
+  background: #ff5866;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   color: #fafafa;
   -webkit-box-shadow: 5px 5px 0 0 rgba(34, 40, 49, 0.3);
@@ -343,10 +340,9 @@ header {
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
-  border-radius: 5px;
 }
 .about-me-container .about-me-content .read-btn:hover {
-  color: #2b4353;
+  color: #00344e;
 }
 .about-me-container .about-me-content .read-btn:hover::after {
   -webkit-transform-origin: left;
@@ -355,7 +351,7 @@ header {
           transform: scaleX(1);
 }
 .about-me-container .about-me-content h1 {
-  color: #e8630a;
+  color: #ff5866;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -389,7 +385,6 @@ header {
   padding: 1rem;
   text-align: center;
   border: 1px solid #132743;
-  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 0 rgba(34, 40, 49, 0.3);
           box-shadow: 5px 5px 0 0 rgba(34, 40, 49, 0.3);
 }
@@ -397,16 +392,15 @@ header {
   font-size: 3rem;
   color: #132743;
   padding-bottom: 0.5rem;
-  color: #e8630a;
+  color: #ff5866;
 }
 
 /* Modal Section */
 .modal-container {
   line-height: 1.7rem;
   width: 550px;
-  height: 560px;
+  height: 580px;
   background: #222831;
-  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
   margin: auto auto;
@@ -449,7 +443,7 @@ header {
   padding: 4rem 0 1rem 0;
 }
 .modal-container .modal-content h1 {
-  color: #e8630a;
+  color: #ff5866;
 }
 .modal-container .modal-content .paragraph {
   letter-spacing: 0.05rem;
@@ -465,7 +459,7 @@ header {
   min-height: 90vh;
   padding-top: 1rem;
   padding-bottom: 2.5rem;
-  background: #2b4353;
+  background: #00344e;
   letter-spacing: 0.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,7 +498,6 @@ header {
   position: relative;
   line-height: 1.3rem;
   border: 0.5px solid #b8b6b3;
-  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
 }
@@ -535,22 +528,20 @@ header {
   bottom: -10px;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn {
-  background: #e8630a;
+  background: #ff5866;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
-  border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn:hover {
   background: #fafafa;
-  color: #2b4353;
+  color: #00344e;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column img {
   width: 100%;
   max-height: 550px;
   border-bottom: 0.5px solid #fafafa;
-  border-radius: 4px 4px 0 0;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column a {
   text-decoration: none;
@@ -560,7 +551,7 @@ header {
 /* Section 5, Banner */
 .section-5 {
   min-height: 30vh;
-  background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
+  background-image: url(/image/pexels-hasan-albari-1229861.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -602,13 +593,12 @@ header {
   color: #fafafa;
 }
 .section-5 .banner-content .inner-banner .orange-text {
-  color: #e8630a;
+  color: #ff5866;
 }
 .section-5 .banner-content .btn-div .contact-btn {
   padding: 0.6rem 2rem;
   border: none;
-  border-radius: 5px;
-  background: #e8630a;
+  background: #ff5866;
   font-size: 1.5rem;
   cursor: pointer;
   color: #fafafa;
@@ -621,7 +611,6 @@ header {
   width: 100%;
   height: 100%;
   background: #222831;
-  border-radius: 5px;
   top: 0;
   left: 0;
   z-index: -1;
@@ -641,7 +630,7 @@ header {
 
 /* Section 6, mini projects */
 .section-6 {
-  background: #2b4353;
+  background: #00344e;
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,7 +673,6 @@ header {
 .section-6 .mini-project-content .mini-inner-content {
   position: relative;
   border: 0.5px solid #b8b6b3;
-  border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.3);
 }
@@ -715,17 +703,16 @@ header {
   bottom: -10px;
 }
 .section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn {
-  background: #e8630a;
+  background: #ff5866;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
-  border-radius: 5px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   color: #fafafa;
 }
 .section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn:hover {
   background: #fafafa;
-  color: #2b4353;
+  color: #00344e;
 }
 .section-6 .mini-project-content .mini-inner-content a {
   text-decoration: none;
@@ -739,12 +726,11 @@ header {
 .section-6 .mini-project-content .mini-inner-content .img-div img {
   width: 100%;
   max-height: 550px;
-  border-radius: 4px 4px 0 0;
 }
 
 /* Section 7, Contact Form */
 .contact-form {
-  background: #2b4353;
+  background: #00344e;
   min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -789,22 +775,20 @@ header {
   font-size: 1.2rem;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
-  background: #e8630a;
+  background: #ff5866;
   color: #fafafa;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .contact-form .form-container .form .form-group .btn:hover {
   background: #fafafa;
-  color: #2b4353;
+  color: #00344e;
 }
 .contact-form .form-container .form .form-group input, .contact-form .form-container .form .form-group textarea {
   padding: 0.8rem 2rem;
   width: 50%;
   outline: none;
   border: 1px solid #b8b6b3;
-  border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
           box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.3);
@@ -840,7 +824,7 @@ header {
 /* Back to Top */
 .back-to-top {
   text-align: center;
-  background: #2b4353;
+  background: #00344e;
 }
 .back-to-top a {
   text-decoration: none;
@@ -851,7 +835,7 @@ header {
 /* Footer */
 .footer {
   min-height: 20vh;
-  background: #2b4353;
+  background: #00344e;
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -902,7 +886,7 @@ header {
   transition: 0.2s ease-in-out;
 }
 .footer .footer-content .footer-col a i:hover {
-  color: #e8630a;
+  color: #ff5866;
 }
 
 /* Error Message Status */

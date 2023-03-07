@@ -1,7 +1,7 @@
 export const projectData = [
   {
     id: 1,
-    img: "/image/password.png",
+    img: "/image/password.jpg",
     name: "Password Generator",
     stacks: "HTML CSS JavaScript",
     description:

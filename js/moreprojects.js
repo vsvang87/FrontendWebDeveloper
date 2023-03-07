@@ -21,7 +21,7 @@ export const moreProjectData = [
   },
   {
     id: 3,
-    img: "/image/t-shirt.png",
+    img: "/image/t-shirt.jpg",
     name: "T-Shirt Landing Page",
     stacks: "HTML Sass JavaScript",
     description:

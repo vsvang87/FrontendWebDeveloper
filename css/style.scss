@@ -2,8 +2,8 @@
 $backgroundLightGray: #fafafa;
 $colorLightGray: #b8b6b3;
 $navLinkColor: #132743;
-$colorOrange: #e8630a;
-$colorBlue: #2b4353;
+$colorOrange: #ff5866;
+$colorBlue: #00344e;
 $colorOffBlack: #222831;
 $titleFontSize: 5vw;
 
@@ -104,7 +104,6 @@ header {
         text-decoration: none;
         padding: 0.3rem 1rem;
         border: 2px solid $colorOrange;
-        border-radius: 5px;
         font-size: 1.5rem;
         transition: 0.2s ease-in-out;
         &:hover {
@@ -213,15 +212,16 @@ header {
             padding: 0.5rem 1rem;
             background: $colorOrange;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
             font-size: calc(.5vw + .6rem);
             color: $backgroundLightGray;
             box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
+           
             &:hover {
                 background: $backgroundLightGray;
                 color: $colorBlue;
+               
             }
         }
         .soft-skill-list {
@@ -279,7 +279,6 @@ header {
             padding: 0.5rem 1rem;
             background: $colorOrange;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
             color: $backgroundLightGray;
             box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
@@ -298,15 +297,13 @@ header {
                 transition: 0.25s ease-in;
                 transform: scaleX(0);
                 transform-origin: left;
-                border-radius: 5px;
+               
             }
             &:hover{
                 color: $colorBlue;
-                
                 &::after{
                     transform-origin: left;
                     transform: scaleX(1);
-                    
                 }
             }
         }
@@ -342,7 +339,6 @@ header {
             padding: 1rem;
             text-align: center;
             border: 1px solid $navLinkColor;
-            border-radius: 5px;
             box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             i{
                 font-size: 3rem;
@@ -360,9 +356,8 @@ header {
 .modal-container{
     line-height: 1.7rem;
     width: 550px;
-    height: 560px;
-    background: $colorOffBlack;
-    border-radius: 5px;
+    height: 580px;
+    background: $colorOffBlack; 
     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
     margin: auto auto;
     position: fixed;
@@ -394,7 +389,6 @@ header {
         width: 90%;
         margin-inline: auto;
         padding: 4rem 0 1rem 0;
-        
         h1{
             color: $colorOrange;
         }
@@ -441,12 +435,10 @@ align-items: center;
             position: relative;
             line-height: 1.3rem;
             border: .5px solid $colorLightGray;
-            border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
                 width: 100%;
             }
-            
             .description{
                 padding: 0.8rem 0.3rem;
                 color: $backgroundLightGray;
@@ -470,7 +462,7 @@ align-items: center;
                         background: $colorOrange;
                         padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
-                       border-radius: 5px;
+                       
                        transition: 0.2s ease-in-out;
                        &:hover{
                         background: $backgroundLightGray;
@@ -483,7 +475,7 @@ align-items: center;
                 width: 100%;
                 max-height: 550px;
                 border-bottom: 0.5px solid $backgroundLightGray;
-                border-radius: 4px 4px 0 0;
+                
             }
             a{
                 text-decoration: none;
@@ -496,12 +488,11 @@ align-items: center;
 /* Section 5, Banner */
 .section-5{
     min-height: 30vh;
-   background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
+   background-image: url(/image/pexels-hasan-albari-1229861.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    
     padding: 1rem 0;
     display: flex;
     justify-content: center;
@@ -528,7 +519,6 @@ align-items: center;
             .contact-btn{
                 padding: .6rem 2rem;
                 border: none;
-                border-radius: 5px;
                 background: $colorOrange;
                 font-size: 1.5rem;
                 cursor: pointer;
@@ -542,7 +532,6 @@ align-items: center;
                     width: 100%;
                     height: 100%;
                     background: $colorOffBlack;
-                    border-radius: 5px;
                     top: 0;
                     left: 0;
                     z-index: -1;
@@ -592,7 +581,6 @@ align-items: center;
         .mini-inner-content{
             position: relative;
             border: .5px solid $colorLightGray;
-            border-radius: 5px;
             box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
                 width: 100%;
@@ -621,7 +609,6 @@ align-items: center;
                     background: $colorOrange;
                         padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
-                       border-radius: 5px;
                        transition: 0.2s ease-in-out;
                        color: $backgroundLightGray;
                        &:hover{
@@ -642,7 +629,6 @@ align-items: center;
                 img{
                     width: 100%;
                    max-height: 550px;
-                   border-radius: 4px 4px 0 0;
                 }
             }
         }
@@ -680,7 +666,6 @@ align-items: center;
                     font-size: 1.2rem;
                     cursor: pointer;
                     border: none;
-                    border-radius: 5px;
                     background: $colorOrange;
                     color: $backgroundLightGray;
                     transition: 0.2s ease;
@@ -694,7 +679,6 @@ align-items: center;
                     width: 50%;
                     outline: none;
                     border: 1px solid $colorLightGray;
-                    border-radius: 5px;
                     font-family: Arial, Helvetica, sans-serif;
                     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
                     @include mediaQuery780px(){
