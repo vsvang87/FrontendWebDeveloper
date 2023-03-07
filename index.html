@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---------------------Google Fonts--------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=EB+Garamond:ital@1&family=Epilogue:wght@300&family=Fredoka&family=Lato:ital,wght@0,400;1,300;1,400&family=Lobster&family=Montserrat:wght@200&family=PT+Sans&family=Poppins:wght@200&family=Quicksand:wght@500&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&family=Spline+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -26,6 +31,7 @@
               <i class="fa-solid fa-x"></i>
             </button>
           </div>
+          <!----------------------Nav Links-------------------------------->
           <ul class="nav-menu">
             <li class="nav-item">
               <a href="#about-me" class="nav-link">ABOUT</a>
@@ -38,12 +44,13 @@
             </li>
           </ul>
         </nav>
-        <!--Hamburger Menu-->
+        <!--------------------------Hamburger Menu-------------------------->
         <div class="hamburger-div">
           <button class="hamburger-btn" id="hamburger-btn">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
+        <!--------------------------Hero Content---------------------------->
         <div class="container">
           <div class="intro-content">
             <h1>Hello,<span class="orange-text"> I'm Visay</span></h1>
@@ -51,31 +58,39 @@
             <p>I build responsive user interfaces</p>
             <p>Available for work</p>
 
-            <a href="/data/frontend-dev.pdf" target="_blank" class="cv-btn"
-              >Resume</a
-            >
+            <div class="cv-container">
+              <a href="/data/frontend-dev.pdf" target="_blank" class="cv-btn"
+                >Resume</a
+              >
+            </div>
+            <ul class="soft-skill-list">
+              <li>Team player</li>
+              <li>Self-motivated</li>
+              <li>Problem-solving</li>
+              <li>Critical thinking</li>
+              <li>Great attitude</li>
+            </ul>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <!--About Me-->
+      <!----------------------------------About Me------------------------>
       <section class="section-1 section" id="about-me">
         <div class="wrapper">
           <div class="about-me-container">
             <div class="about-me-content about-column reveal">
               <h1>ABOUT ME</h1>
               <p>
-                My name is Visay Vang, I am a self-taught developer. This is by
-                far one of the hardest thing I've ever done. Being a husband and
-                father of 4 while trying to learn code is not an easy task. I
+                My name is Visay Vang, I am a self-taught developer. I could
+                take a sketch and turn it into a beautiful design with code. I
                 understand that this is a life long learning career because of
                 technology constantly growing and evolving. This is something
                 that I love to do and is up for the challenge.
               </p>
               <button id="read-more-btn" class="read-btn">Read more...</button>
             </div>
-            <!--Skills-->
+            <!-----------------------------Skills-------------------------->
             <div class="skills about-column">
               <div class="skill-container reveal">
                 <div class="skill-column">
@@ -111,7 +126,7 @@
           </div>
         </div>
       </section>
-      <!--Modal Section-->
+      <!-------------------------------Modal Section----------------->
       <div class="modal-container" id="modal">
         <div class="modal-close-btn">
           <button class="modal-btn" id="modal-btn">

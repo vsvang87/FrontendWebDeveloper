@@ -5,7 +5,7 @@ export const projectData = [
     name: "Password Generator",
     stacks: "HTML CSS JavaScript",
     description:
-      "Project from scrimba to test out what we learned from the course. You could set character length and also could include uppercase, lowercase, symbol or number in your password. I have also implemented a click to copy feature. ",
+      "You could set character length and include uppercase, lowercase, symbol or number in your password. I have also implemented a click to copy feature. ",
     url: "https://visaypasswordgenerator.netlify.app",
     github: "https://github.com/vsvang87/Password-Generator/tree/master",
   },

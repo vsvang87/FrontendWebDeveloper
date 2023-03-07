@@ -45,6 +45,7 @@ body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
+    font-size: calc(.5vw + .6rem);
 }
 header {
     display: flex;
@@ -105,6 +106,11 @@ header {
         border: 2px solid $colorOrange;
         border-radius: 5px;
         font-size: 1.5rem;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background: $colorOrange;
+            color: $backgroundLightGray;
+        }
         @include mediaQuery680px(){
             position: absolute;
             left: 1.5rem;
@@ -192,25 +198,45 @@ header {
     .orange-text{
         color: $colorOrange;
     }
+   
     .intro-content{
+        
         p{
-            padding: .3 0;
+            margin: 0.8rem 0;
             color: $backgroundLightGray;
+        }
+        .cv-container {
+            padding-top: .8rem;
         }
         .cv-btn{
             text-decoration: none;
-            padding: 0.3rem 1rem;
+            padding: 0.5rem 1rem;
             background: $colorOrange;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: calc(.5vw + .6rem);
             color: $backgroundLightGray;
             box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
             &:hover {
                 background: $backgroundLightGray;
                 color: $colorBlue;
+            }
+        }
+        .soft-skill-list {
+            padding: 0;
+            margin: 0;
+            margin-top: 1.2rem;
+            li {
+                list-style-type: none;
+                color: $backgroundLightGray;
+                padding: 0.3rem 0;
+                &::before {
+                    content: '\2714';
+                    color: $colorOrange;
+                    padding-right: .5rem;
+                }
             }
         }
         
@@ -249,12 +275,12 @@ header {
     .about-me-content {
         line-height: 1.3rem;
         .read-btn{
+            font-size: calc(0.5vw + .6rem);
             padding: 0.5rem 1rem;
             background: $colorOrange;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
             color: $backgroundLightGray;
             box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
@@ -290,7 +316,8 @@ header {
             padding-bottom: 1rem;
         }
         p{
-            letter-spacing: 0.05rem;
+            letter-spacing: 0.06rem;
+            line-height: 1.6rem;
                 }
     }
     .about-column{
@@ -333,7 +360,7 @@ header {
 .modal-container{
     line-height: 1.7rem;
     width: 550px;
-    height: 550px;
+    height: 560px;
     background: $colorOffBlack;
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
@@ -438,10 +465,10 @@ align-items: center;
                 .view-github-button {
                     height: 50px;
                     position: absolute;
-                    bottom: -15px;
+                    bottom: -10px;
                     .view-btn{
                         background: $colorOrange;
-                        padding: 0.2rem 0.5rem;
+                        padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
                        border-radius: 5px;
                        transition: 0.2s ease-in-out;
@@ -469,7 +496,7 @@ align-items: center;
 /* Section 5, Banner */
 .section-5{
     min-height: 30vh;
-   background-image: url(/image/pexels-pixabay-417173.jpg);
+   background-image: url(/image/pexels-stephan-seeber-1054218.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -589,10 +616,10 @@ align-items: center;
             .view-github-button {
                 height: 50px;
                     position: absolute;
-                    bottom: -15px;
+                    bottom: -10px;
                 .view-btn{
                     background: $colorOrange;
-                        padding: 0.2rem 0.5rem;
+                        padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
                        border-radius: 5px;
                        transition: 0.2s ease-in-out;
@@ -730,6 +757,13 @@ transition: 0.5s ease;
                 color: $backgroundLightGray;
                 font-size: 1.5rem;
                 padding: 0 .3rem;
+                
+                i {
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        color: $colorOrange;
+                    }
+                }
             }
         }
     }
