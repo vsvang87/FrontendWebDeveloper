@@ -1,6 +1,8 @@
 import { projectData } from "./data.js";
 import { moreProjectData } from "./moreprojects.js";
+import { skillData } from "./skilldata.js";
 
+// grabbing all needed selector
 const form = document.getElementById("my-form");
 const modalCloseBtn = document.getElementById("modal-btn");
 const readMoreBtn = document.getElementById("read-more-btn");
@@ -11,6 +13,7 @@ const hamburgerCloseBtn = document.getElementById("hamburger-close");
 const navLink = document.querySelectorAll(".nav-link");
 const projectContainer = document.getElementById("project-render-container");
 const moreProjectContainer = document.getElementById("more-project-container");
+const skillContainer = document.querySelector(".skill-container");
 
 //open modal
 readMoreBtn.addEventListener("click", () => {
@@ -36,10 +39,24 @@ navLink.forEach((link) => {
   });
 });
 
+// rendering skills
+function renderSkillsData() {
+  skillData.forEach((skills) => {
+    const { skill, icon } = skills;
+    skillContainer.innerHTML += `
+              <div class="skill-column">
+                  ${icon}
+                  <p>${skill}</p>
+                </div>
+    
+    `;
+  });
+}
+renderSkillsData();
 //rendering first 3 projects data into HTML
 function renderProjectToHTMl() {
   projectData.forEach((project) => {
-    const { id, name, img, stacks, description, url, github } = project;
+    const { name, img, stacks, description, url, github } = project;
     projectContainer.innerHTML += `
     <div class="landing-page-column reveal">
                 <div class="img-div">
@@ -75,7 +92,7 @@ renderProjectToHTMl();
 //rendering the lat 3 projects data into HTML
 function moreProjects() {
   moreProjectData.forEach((project) => {
-    const { id, name, img, stacks, description, url, github } = project;
+    const { name, img, stacks, description, url, github } = project;
     moreProjectContainer.innerHTML += `
     <div class="mini-inner-content reveal">
               <div class="img-div">
@@ -106,6 +123,7 @@ function moreProjects() {
   });
 }
 moreProjects();
+
 //form submit handler
 async function handleSubmit(event) {
   event.preventDefault();
@@ -142,7 +160,7 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-//scroll animation
+//scroll animation, content fade in when scroll down
 window.addEventListener("scroll", reveal);
 
 function reveal() {

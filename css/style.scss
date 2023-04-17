@@ -2,8 +2,8 @@
 $backgroundLightGray: #fafafa;
 $colorLightGray: #b8b6b3;
 $navLinkColor: #132743;
-$colorOrange: #ff5866;
-$colorBlue: #00344e;
+$colorOrange: #ff7d41;
+$colorBlue: #005075;
 $colorOffBlack: #222831;
 $titleFontSize: 5vw;
 
@@ -27,6 +27,9 @@ $titleFontSize: 5vw;
         @content;
     }
 }
+* {
+    font-family: 'Quicksand', sans-serif;
+}
 
 html{
     scroll-behavior: smooth;
@@ -43,7 +46,7 @@ html{
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
     overflow-x: hidden;
     font-size: calc(.5vw + .6rem);
 }
@@ -105,11 +108,11 @@ header {
         padding: 0.3rem 1rem;
         border: 2px solid $colorOrange;
         font-size: 1.5rem;
-        transition: 0.2s ease-in-out;
-        &:hover {
+        /* transition: 0.2s ease-in-out; */
+       /*  &:hover {
             background: $colorOrange;
             color: $backgroundLightGray;
-        }
+        } */
         @include mediaQuery680px(){
             position: absolute;
             left: 1.5rem;

@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -6,7 +10,7 @@ html::-webkit-scrollbar {
   width: 1rem;
 }
 html::-webkit-scrollbar-thumb {
-  background: #ff5866;
+  background: #ff7d41;
 }
 html::-webkit-scrollbar-track {
   background: #b8b6b3;
@@ -15,7 +19,7 @@ html::-webkit-scrollbar-track {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  /* font-family: 'Quicksand', sans-serif; */
   overflow-x: hidden;
   font-size: calc(0.5vw + 0.6rem);
 }
@@ -35,7 +39,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  background-color: #00344e;
+  background-color: #005075;
 }
 
 .wrapper {
@@ -98,17 +102,16 @@ header {
   left: -100%;
 }
 .navbar .my-logo {
-  color: #ff5866;
+  color: #ff7d41;
   text-decoration: none;
   padding: 0.3rem 1rem;
-  border: 2px solid #ff5866;
+  border: 2px solid #ff7d41;
   font-size: 1.5rem;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-.navbar .my-logo:hover {
-  background: #ff5866;
-  color: #fafafa;
+  /* transition: 0.2s ease-in-out; */
+  /*  &:hover {
+       background: $colorOrange;
+       color: $backgroundLightGray;
+   } */
 }
 @media (max-width: 680px) {
   .navbar .my-logo {
@@ -153,7 +156,7 @@ header {
 }
 .navbar ul li a::after {
   content: "";
-  background: #ff5866;
+  background: #ff7d41;
   display: block;
   width: 100%;
   height: 2px;
@@ -166,7 +169,7 @@ header {
   transition: 0.2s ease-in;
 }
 .navbar ul li a:hover {
-  color: #ff5866;
+  color: #ff7d41;
 }
 .navbar ul li a:hover::after {
   -webkit-transform: scaleX(1);
@@ -218,7 +221,7 @@ header {
   margin: 0;
 }
 .container .orange-text {
-  color: #ff5866;
+  color: #ff7d41;
 }
 .container .intro-content p {
   margin: 0.8rem 0;
@@ -230,7 +233,7 @@ header {
 .container .intro-content .cv-btn {
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #ff5866;
+  background: #ff7d41;
   border: none;
   cursor: pointer;
   font-size: calc(0.5vw + 0.6rem);
@@ -242,7 +245,7 @@ header {
 }
 .container .intro-content .cv-btn:hover {
   background: #fafafa;
-  color: #00344e;
+  color: #005075;
 }
 .container .intro-content .soft-skill-list {
   padding: 0;
@@ -256,7 +259,7 @@ header {
 }
 .container .intro-content .soft-skill-list li::before {
   content: "✔";
-  color: #ff5866;
+  color: #ff7d41;
   padding-right: 0.5rem;
 }
 
@@ -277,7 +280,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #00344e;
+  background: #005075;
   padding-bottom: 2rem;
 }
 
@@ -314,7 +317,7 @@ header {
 .about-me-container .about-me-content .read-btn {
   font-size: calc(0.5vw + 0.6rem);
   padding: 0.5rem 1rem;
-  background: #ff5866;
+  background: #ff7d41;
   border: none;
   cursor: pointer;
   color: #fafafa;
@@ -342,7 +345,7 @@ header {
           transform-origin: left;
 }
 .about-me-container .about-me-content .read-btn:hover {
-  color: #00344e;
+  color: #005075;
 }
 .about-me-container .about-me-content .read-btn:hover::after {
   -webkit-transform-origin: left;
@@ -351,7 +354,7 @@ header {
           transform: scaleX(1);
 }
 .about-me-container .about-me-content h1 {
-  color: #ff5866;
+  color: #ff7d41;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -392,7 +395,7 @@ header {
   font-size: 3rem;
   color: #132743;
   padding-bottom: 0.5rem;
-  color: #ff5866;
+  color: #ff7d41;
 }
 
 /* Modal Section */
@@ -443,7 +446,7 @@ header {
   padding: 4rem 0 1rem 0;
 }
 .modal-container .modal-content h1 {
-  color: #ff5866;
+  color: #ff7d41;
 }
 .modal-container .modal-content .paragraph {
   letter-spacing: 0.05rem;
@@ -459,7 +462,7 @@ header {
   min-height: 90vh;
   padding-top: 1rem;
   padding-bottom: 2.5rem;
-  background: #00344e;
+  background: #005075;
   letter-spacing: 0.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -528,7 +531,7 @@ header {
   bottom: -10px;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn {
-  background: #ff5866;
+  background: #ff7d41;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
   -webkit-transition: 0.2s ease-in-out;
@@ -536,7 +539,7 @@ header {
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column .description .view-github-button .view-btn:hover {
   background: #fafafa;
-  color: #00344e;
+  color: #005075;
 }
 .section-4 .landing-page-container .landing-page-content .landing-page-column img {
   width: 100%;
@@ -593,12 +596,12 @@ header {
   color: #fafafa;
 }
 .section-5 .banner-content .inner-banner .orange-text {
-  color: #ff5866;
+  color: #ff7d41;
 }
 .section-5 .banner-content .btn-div .contact-btn {
   padding: 0.6rem 2rem;
   border: none;
-  background: #ff5866;
+  background: #ff7d41;
   font-size: 1.5rem;
   cursor: pointer;
   color: #fafafa;
@@ -630,7 +633,7 @@ header {
 
 /* Section 6, mini projects */
 .section-6 {
-  background: #00344e;
+  background: #005075;
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -703,7 +706,7 @@ header {
   bottom: -10px;
 }
 .section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn {
-  background: #ff5866;
+  background: #ff7d41;
   padding: 0.5rem 1rem;
   margin-left: 0.5rem;
   -webkit-transition: 0.2s ease-in-out;
@@ -712,7 +715,7 @@ header {
 }
 .section-6 .mini-project-content .mini-inner-content .view-github-button .view-btn:hover {
   background: #fafafa;
-  color: #00344e;
+  color: #005075;
 }
 .section-6 .mini-project-content .mini-inner-content a {
   text-decoration: none;
@@ -730,7 +733,7 @@ header {
 
 /* Section 7, Contact Form */
 .contact-form {
-  background: #00344e;
+  background: #005075;
   min-height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,14 +778,14 @@ header {
   font-size: 1.2rem;
   cursor: pointer;
   border: none;
-  background: #ff5866;
+  background: #ff7d41;
   color: #fafafa;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .contact-form .form-container .form .form-group .btn:hover {
   background: #fafafa;
-  color: #00344e;
+  color: #005075;
 }
 .contact-form .form-container .form .form-group input, .contact-form .form-container .form .form-group textarea {
   padding: 0.8rem 2rem;
@@ -824,7 +827,7 @@ header {
 /* Back to Top */
 .back-to-top {
   text-align: center;
-  background: #00344e;
+  background: #005075;
 }
 .back-to-top a {
   text-decoration: none;
@@ -835,7 +838,7 @@ header {
 /* Footer */
 .footer {
   min-height: 20vh;
-  background: #00344e;
+  background: #005075;
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -886,7 +889,7 @@ header {
   transition: 0.2s ease-in-out;
 }
 .footer .footer-content .footer-col a i:hover {
-  color: #ff5866;
+  color: #ff7d41;
 }
 
 /* Error Message Status */
