@@ -39,19 +39,19 @@ export const skillData = [
     skill: "Python",
     icon: '<i class="fa-brands fa-python"></i>',
   },
-  {
-    id: "s9",
-    skill: "Flask",
-    icon: '<i class="fa-solid fa-flask"></i>',
-  },
-  {
-    id: "s10",
-    skill: "Jinja",
-    icon: '<i class="fa-solid fa-torii-gate"></i>',
-  },
-  {
-    id: "s11",
-    skill: "PostgreSQL",
-    icon: '<i class="fa-regular fa-elephant"></i>',
-  },
+  // {
+  //   id: "s9",
+  //   skill: "Flask",
+  //   icon: '<i class="fa-solid fa-flask"></i>',
+  // },
+  // {
+  //   id: "s10",
+  //   skill: "Jinja",
+  //   icon: '<i class="fa-solid fa-torii-gate"></i>',
+  // },
+  // {
+  //   id: "s11",
+  //   skill: "PostgreSQL",
+  //   icon: '<i class="fa-regular fa-elephant"></i>',
+  // },
 ];

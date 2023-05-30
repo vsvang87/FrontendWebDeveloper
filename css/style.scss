@@ -1,8 +1,8 @@
 
 $backgroundLightGray: #fafafa;
-$colorLightGray: #b8b6b3;
+$colorLightGray: #f0f0f0;
 $navLinkColor: #132743;
-$colorOrange: #ff7d41;
+$colorOrange: #fc6d85;
 $colorBlue: #005075;
 $colorOffBlack: #222831;
 $titleFontSize: 5vw;
@@ -57,6 +57,20 @@ header {
     flex-direction: column;
     min-height: 100vh;
     background-color: $colorBlue;
+    clip-path: polygon(47% 0, 100% 0, 100% 85%, 0 100%, 0 80%, 0 0);
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url(/image/code.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        filter: brightness(60%);
+        opacity: 0.5;
+    }
 }
 
 
@@ -218,7 +232,7 @@ header {
             cursor: pointer;
             font-size: calc(.5vw + .6rem);
             color: $backgroundLightGray;
-            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
+            box-shadow: 5px 5px 5px 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
            
             &:hover {
@@ -256,7 +270,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: $colorBlue;
     padding-bottom: 2rem;
 }
 
@@ -272,7 +285,9 @@ header {
     }
     p {
         margin-top: 0;
-        color: $backgroundLightGray; 
+        color: $colorOffBlack; 
+        padding-right: 3rem;
+        width: 80%;
     }
     
     .about-me-content {
@@ -284,7 +299,7 @@ header {
             border: none;
             cursor: pointer;
             color: $backgroundLightGray;
-            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
+            box-shadow: 5px 5px 5px 0 rgba($color: $colorOffBlack, $alpha: 0.3);
             transition: 0.2s ease;
             position: relative;
             z-index: 1;
@@ -341,8 +356,7 @@ header {
             width: 80%;
             padding: 1rem;
             text-align: center;
-            border: 1px solid $navLinkColor;
-            box-shadow: 5px 5px 0 0 rgba($color: $colorOffBlack, $alpha: 0.3);
+            box-shadow: 5px 8px 10px 2px rgba($color: $colorOffBlack, $alpha: 0.3);
             i{
                 font-size: 3rem;
                 color: $navLinkColor;
@@ -359,9 +373,9 @@ header {
 .modal-container{
     line-height: 1.7rem;
     width: 550px;
-    height: 580px;
+    height: 620px;
     background: $colorOffBlack; 
-    box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
+    box-shadow: 5px 5px 5px 0 rgba($color: black, $alpha: 0.3);
     margin: auto auto;
     position: fixed;
     top: -200%;
@@ -411,7 +425,7 @@ header {
 min-height: 90vh;
 padding-top: 1rem;
 padding-bottom: 2.5rem;
-background: $colorBlue;
+background: $colorLightGray;
 letter-spacing: 0.1rem;
 display: flex;
 justify-content: center;
@@ -420,7 +434,7 @@ align-items: center;
     h1{
         font-size: 2rem;
         text-align: center;
-        color: $backgroundLightGray;
+        color: $colorOffBlack;
     }
     .landing-page-content{
         display: grid;
@@ -437,14 +451,14 @@ align-items: center;
         .landing-page-column{
             position: relative;
             line-height: 1.3rem;
-            border: .5px solid $colorLightGray;
-            box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
+            background: #fff;
+            box-shadow: 5px 8px 10px 0px rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
                 width: 100%;
             }
             .description{
                 padding: 0.8rem 0.3rem;
-                color: $backgroundLightGray;
+                color: $colorOffBlack;
                 height: 315px;
                 p {
                     padding: 0 0.5rem;
@@ -465,11 +479,11 @@ align-items: center;
                         background: $colorOrange;
                         padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
-                       
+                        border: 1px solid $colorOrange;
                        transition: 0.2s ease-in-out;
                        &:hover{
-                        background: $backgroundLightGray;
-                        color: $colorBlue;
+                        background: transparent;
+                        color: $colorOrange;
                        }
                     }
                 }
@@ -525,7 +539,7 @@ align-items: center;
                 background: $colorOrange;
                 font-size: 1.5rem;
                 cursor: pointer;
-                color: $backgroundLightGray;
+                color: $colorOffBlack;
                 position: relative;
                 z-index: 1;
                 
@@ -534,7 +548,7 @@ align-items: center;
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background: $colorOffBlack;
+                    background: $backgroundLightGray;
                     top: 0;
                     left: 0;
                     z-index: -1;
@@ -546,6 +560,7 @@ align-items: center;
                 &::after{
                     transform: scaleX(1);
                     transform-origin: left;
+                    
                 }
     }
             }
@@ -556,7 +571,7 @@ align-items: center;
 }
 /* Section 6, mini projects */
 .section-6{
-    background: $colorBlue;
+    background: $colorLightGray;
     min-height: 80vh;
     display: flex;
     justify-content: center;
@@ -567,7 +582,7 @@ align-items: center;
     h1{
         font-size: 2rem;
         text-align: center;
-        color: $backgroundLightGray;
+        color: $colorOffBlack;
     }
     .mini-project-content{
         line-height: 1.3rem;
@@ -583,14 +598,14 @@ align-items: center;
         }
         .mini-inner-content{
             position: relative;
-            border: .5px solid $colorLightGray;
-            box-shadow: 5px 5px 0 2px rgba($color: #000000, $alpha: 0.3);
+            background: #fff;
+            box-shadow: 5px 8px 12px 0 rgba($color: #000000, $alpha: 0.3);
             @include mediaQuery680px(){
                 width: 100%;
             }
             .description{
                 padding: 0.8rem 0.3rem;
-                color: $backgroundLightGray;
+                color: $colorOffBlack;
                 height: 315px;
                 p {
                     padding: 0 0.5rem;
@@ -608,15 +623,17 @@ align-items: center;
                 height: 50px;
                     position: absolute;
                     bottom: -10px;
+                    
                 .view-btn{
                     background: $colorOrange;
                         padding: 0.5rem 1rem;
                         margin-left: 0.5rem;
                        transition: 0.2s ease-in-out;
                        color: $backgroundLightGray;
+                       border: 1px solid $colorOrange;
                        &:hover{
-                        background: $backgroundLightGray;
-                        color: $colorBlue;
+                        background: transparent;
+                        color: $colorOrange;
                        }
                 }
             }
@@ -678,9 +695,10 @@ align-items: center;
                     }
                 }
                 input, textarea{
-                    padding: 0.8rem 2rem;
+                    padding: 1.2rem .5rem;
                     width: 50%;
                     outline: none;
+                    resize: none;
                     border: 1px solid $colorLightGray;
                     font-family: Arial, Helvetica, sans-serif;
                     box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
@@ -730,15 +748,17 @@ transition: 0.5s ease;
     flex-direction: column;
     .footer-content{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
        @include mediaQuery680px(){
         flex-direction: column;
         padding: 2rem 0;
        }
         .footer-col{
             width: 48%;
+            @include mediaQuery680px() {
+                text-align: center;
+            }
             a{
                 text-decoration: none;
                 color: $backgroundLightGray;
@@ -751,6 +771,12 @@ transition: 0.5s ease;
                         color: $colorOrange;
                     }
                 }
+            }
+        }
+        .icons {
+            text-align: right;
+            @include mediaQuery680px() {
+                text-align: center;
             }
         }
     }
