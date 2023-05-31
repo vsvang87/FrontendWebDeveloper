@@ -292,6 +292,7 @@ header {
         line-height: 1.3rem;
         p {
             width: 70%;
+
         }
         .read-btn{
             font-size: calc(0.5vw + .6rem);
@@ -329,7 +330,7 @@ header {
         h1{
             color: $colorOrange;
             margin: 0;
-            padding-bottom: 1rem;
+            padding-bottom: 1.5rem;
         }
         p{
             letter-spacing: 0.06rem;
@@ -541,7 +542,7 @@ align-items: center;
                 background: $colorOrange;
                 font-size: 1.5rem;
                 cursor: pointer;
-                color: $colorOffBlack;
+                color: $backgroundLightGray;
                 position: relative;
                 z-index: 1;
                 
@@ -550,7 +551,7 @@ align-items: center;
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    background: $backgroundLightGray;
+                    background: $colorOffBlack;
                     top: 0;
                     left: 0;
                     z-index: -1;
