@@ -1,13 +1,13 @@
 export const moreProjectData = [
   {
     id: 1,
-    img: "/image/discountcalc.jpg",
-    name: "Discount Calculator",
-    stacks: "HTML CSS JavaScript",
+    img: "/image/tesla.jpg",
+    name: "Tesla Clone Site",
+    stacks: "HTML Sass JavaScript",
     description:
-      "A small calculator that calculate discount for you. You enter in the amount and select the discount percentage and it will calculate the final pay price and how much you saved. I implemented regex to check for number and special characters. Also formatted decimal to 2 places.",
-    url: "https://visaydiscountcalculator.netlify.app",
-    github: "https://github.com/vsvang87/DiscountCalculator/tree/master",
+      "A Tesla clone website. Structure the site with HTML, styled it with Sass and JavaScript for mobile menu functionality.",
+    url: "https://visayteslaclone.netlify.app",
+    github: "https://github.com/vsvang87/TeslaClone.git",
   },
   {
     id: 2,
