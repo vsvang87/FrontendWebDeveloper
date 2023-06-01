@@ -5,7 +5,7 @@ export const projectData = [
     name: "Password Generator",
     stacks: "HTML CSS JavaScript",
     description:
-      "You could set character length and include uppercase, lowercase, symbol or number in your password. I have also implemented a click to copy feature. ",
+      "A password generator app. Allows users to set character length and can include uppercase, lowercase, symbol or number in their password.",
     url: "https://visaypasswordgenerator.netlify.app",
     github: "https://github.com/vsvang87/Password-Generator/tree/master",
   },
@@ -15,7 +15,7 @@ export const projectData = [
     name: "Recipe Finder",
     stacks: "HTML CSS JavaScript",
     description:
-      "A recipe app that search and retrieved a recipe of your choice. Implemented a third party API to retrieve and render into HTML. I have also included link to actual recipe.",
+      "A recipe app that search and retrieved any recipe of interest. Implement ajax to fetch data and rendering it in HTML. ",
     url: "https://visayrecipeapp.netlify.app",
     github: "https://github.com/vsvang87/RecipeApp/tree/master",
   },
@@ -25,7 +25,7 @@ export const projectData = [
     name: "Car Meet-up",
     stacks: "Python, PostgreSQL, Flask, Jinja, HTML, CSS, JavaScript",
     description:
-      "Help car enthusiasts find meet up or host their own event. Has user login authentication and CRUD operations. ",
+      "Help car enthusiasts find meet up or host their own events. Has user login authentication and CRUD operations. ",
     url: "#",
     github: "https://github.com/vsvang87/car-meet",
   },
