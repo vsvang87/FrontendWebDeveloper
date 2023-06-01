@@ -2,8 +2,8 @@
 $backgroundLightGray: #fafafa;
 $colorLightGray: #f0f0f0;
 $navLinkColor: #132743;
-$colorOrange: #fc6d85;
-$colorBlue: #005075;
+$colorOrange: #ff5a76;
+$colorBlue: #007fb1;
 $colorOffBlack: #222831;
 $titleFontSize: 5vw;
 
@@ -46,9 +46,7 @@ html{
 body {
     padding: 0;
     margin: 0;
-    /* font-family: 'Quicksand', sans-serif; */
     overflow-x: hidden;
-    font-size: calc(.5vw + .6rem);
 }
 header {
     display: flex;
@@ -56,7 +54,6 @@ header {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $colorBlue;
     clip-path: polygon(47% 0, 100% 0, 100% 85%, 0 100%, 0 80%, 0 0);
 
     &::after {
@@ -69,7 +66,7 @@ header {
         background-size: cover;
         z-index: -1;
         filter: brightness(60%);
-        opacity: 0.5;
+        opacity: 0.7;
     }
 }
 
@@ -320,7 +317,7 @@ header {
                
             }
             &:hover{
-                color: $colorBlue;
+                color: $colorOffBlack;
                 &::after{
                     transform-origin: left;
                     transform: scaleX(1);
@@ -493,7 +490,7 @@ align-items: center;
             }
             img{
                 width: 100%;
-                max-height: 550px;
+                height: 280px;
                 border-bottom: 0.5px solid $backgroundLightGray;
                 
             }
@@ -574,8 +571,7 @@ align-items: center;
 }
 /* Section 6, mini projects */
 .section-6{
-    background: $colorLightGray;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,7 +647,7 @@ align-items: center;
                 }
                 img{
                     width: 100%;
-                   max-height: 550px;
+                   height: 280px;
                 }
             }
         }
@@ -660,7 +656,7 @@ align-items: center;
 
 /* Section 7, Contact Form */
 .contact-form{
-    background: $colorBlue;
+    background: $colorLightGray;
     min-height: 50vh;
     display: flex;
     justify-content: center;
@@ -669,7 +665,7 @@ align-items: center;
     h1{
         font-size: 2rem;
         text-align: center;
-        color: $backgroundLightGray;
+        color: $colorOffBlack;
     }
     .form-container{
         display: flex;
@@ -704,8 +700,8 @@ align-items: center;
                     resize: none;
                     border: 1px solid $colorLightGray;
                     font-family: Arial, Helvetica, sans-serif;
-                    font-size: 1.2rem;
-                    box-shadow: 5px 5px 0 0 rgba($color: black, $alpha: 0.3);
+                    font-size: 1rem;
+                    box-shadow: 5px 8px 10px 0 rgba($color: black, $alpha: 0.3);
                     @include mediaQuery780px(){
                         width: 70%;
                     }
@@ -759,7 +755,7 @@ transition: 0.5s ease;
         padding: 2rem 0;
        }
         .footer-col{
-            width: 48%;
+            width: 33%;
             @include mediaQuery680px() {
                 text-align: center;
             }

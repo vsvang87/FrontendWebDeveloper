@@ -21,12 +21,12 @@ export const projectData = [
   },
   {
     id: 3,
-    img: "/image/speedtype.jpg",
-    name: "Speed Typing Game",
-    stacks: "HTML CSS JavaScript",
+    img: "/image/car-meet2.jpg",
+    name: "Car Meet-up",
+    stacks: "Python, PostgreSQL, Flask, Jinja, HTML, CSS, JavaScript",
     description:
-      "A speed typing game that generate random words for you to type. Implemented level difficulty, count down timer and local storage. The level difficulty increase timer by a certain amount as you complete each words.",
-    url: "https://visayspeedtypinggame.netlify.app",
-    github: "https://github.com/vsvang87/SpeedTypingGame/tree/master",
+      "Help car enthusiasts find meet up or host their own event. Has user login authentication and CRUD operations. ",
+    url: "#",
+    github: "https://github.com/vsvang87/car-meet",
   },
 ];
